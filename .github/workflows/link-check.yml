@@ -1,0 +1,86 @@
+name: Link Checker
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'diario/**'
+      - 'wiki/**'
+      - 'reglas/**'
+      - 'index.md'
+  pull_request:
+    paths:
+      - 'diario/**'
+      - 'wiki/**'
+      - 'reglas/**'
+      - 'index.md'
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check wikilinks and markdown links
+        run: |
+          exit_code=0
+
+          # Collect all markdown files (excluding ignored dirs)
+          all_files=$(find diario wiki reglas -name '*.md' 2>/dev/null)
+          # Also include root index.md
+          if [ -f "index.md" ]; then
+            all_files="$all_files index.md"
+          fi
+
+          # Build list of valid targets (filename without extension, and relative paths)
+          valid_targets=$(mktemp)
+          for f in $all_files; do
+            # Add path without .md extension
+            echo "${f%.md}" >> "$valid_targets"
+            # Add just filename without extension (for shortest-path wikilinks)
+            basename "${f%.md}" >> "$valid_targets"
+          done
+          sort -u "$valid_targets" -o "$valid_targets"
+
+          for file in $all_files; do
+            # Extract wikilinks [[target]] and [[target|alias]]
+            wikilinks=$(grep -oP '\[\[([^\]|]+)' "$file" | sed 's/\[\[//' | sort -u)
+
+            for link in $wikilinks; do
+              # Skip external URLs
+              if echo "$link" | grep -qE '^https?://'; then
+                continue
+              fi
+
+              # Skip heading-only links like [[#heading]]
+              if echo "$link" | grep -qE '^\#'; then
+                continue
+              fi
+
+              # Strip heading anchor from link
+              target=$(echo "$link" | sed 's/#.*//')
+
+              if [ -z "$target" ]; then
+                continue
+              fi
+
+              # Check if target exists in valid targets
+              if ! grep -qxF "$target" "$valid_targets"; then
+                # Also check with directory prefix relative to current file
+                dir=$(dirname "$file")
+                if ! grep -qxF "${dir}/${target}" "$valid_targets"; then
+                  echo "::warning file=$file::Broken wikilink: [[${link}]]"
+                  exit_code=1
+                fi
+              fi
+            done
+          done
+
+          rm "$valid_targets"
+
+          if [ $exit_code -eq 1 ]; then
+            echo "::notice::Broken links found. Review warnings above."
+          else
+            echo "All links valid."
+          fi

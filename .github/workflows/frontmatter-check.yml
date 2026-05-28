@@ -1,0 +1,60 @@
+name: Frontmatter Validator
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'diario/**'
+      - 'wiki/**'
+      - 'reglas/**'
+  pull_request:
+    paths:
+      - 'diario/**'
+      - 'wiki/**'
+      - 'reglas/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate frontmatter
+        run: |
+          exit_code=0
+
+          for file in $(find diario wiki reglas -name '*.md' 2>/dev/null); do
+            # Check file has frontmatter delimiters
+            if ! head -1 "$file" | grep -q '^---$'; then
+              echo "::error file=$file::Missing frontmatter"
+              exit_code=1
+              continue
+            fi
+
+            # Extract frontmatter block
+            frontmatter=$(sed -n '1,/^---$/p' "$file" | tail -n +2 | head -n -1)
+
+            # Check required fields
+            for field in title publish tags date; do
+              if ! echo "$frontmatter" | grep -q "^${field}:"; then
+                echo "::error file=$file::Missing required field: ${field}"
+                exit_code=1
+              fi
+            done
+
+            # Check publish is boolean
+            publish_val=$(echo "$frontmatter" | grep '^publish:' | sed 's/publish: *//')
+            if [ -n "$publish_val" ] && [ "$publish_val" != "true" ] && [ "$publish_val" != "false" ]; then
+              echo "::error file=$file::publish must be true or false, got: ${publish_val}"
+              exit_code=1
+            fi
+
+            # Check tags is not empty
+            tags_line=$(echo "$frontmatter" | grep -A1 '^tags:')
+            if echo "$tags_line" | grep -q 'tags: \[\]'; then
+              echo "::warning file=$file::tags is empty"
+            fi
+          done
+
+          exit $exit_code

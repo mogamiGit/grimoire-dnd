@@ -1,0 +1,42 @@
+name: Spell Check (Spanish)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'diario/**'
+      - 'wiki/**'
+      - 'reglas/**'
+  pull_request:
+    paths:
+      - 'diario/**'
+      - 'wiki/**'
+      - 'reglas/**'
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install aspell Spanish
+        run: sudo apt-get install -y aspell aspell-es
+
+      - name: Run spell check
+        run: |
+          errors=0
+          for file in $(find diario wiki reglas -name '*.md' 2>/dev/null); do
+            # Strip YAML frontmatter and markdown syntax, then check spelling
+            result=$(sed '1{/^---$/,/^---$/d}' "$file" | \
+              sed 's/\*\*//g; s/\*//g; s/\[\[.*\]\]//g; s/\[.*\](.*//g; s/#//g; s/`[^`]*`//g; s/|//g; s/---//g' | \
+              aspell --lang=es --encoding=utf-8 list | \
+              sort -u)
+            if [ -n "$result" ]; then
+              echo "::warning file=$file::Possible misspellings: $(echo $result | tr '\n' ', ')"
+              errors=1
+            fi
+          done
+          if [ $errors -eq 1 ]; then
+            echo "::notice::Spell check found warnings. Review above."
+          fi
