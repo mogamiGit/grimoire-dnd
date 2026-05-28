@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: "null"
   locale: es-ES
-  baseUrl: mogamigit.github.io/grimoire-dnd
+  baseUrl: dnd.mogamihub.xyz
   ignorePatterns:
     - private
     - _templates
