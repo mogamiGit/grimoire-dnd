@@ -1,0 +1,17 @@
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/plugins/obsidian-git/
+
+# Node / Quartz
+node_modules/
+public/
+.quartz/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive
+.env
