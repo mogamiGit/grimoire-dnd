@@ -8,35 +8,36 @@ tags:
 description: ""
 date: "{{date}}"
 location: ""
+campaign_day:
 ---
 
 # Session {{date}}
 
 > [!summary]
-> Brief summary of the session in 1-2 lines.
+> Resumen breve de la sesion en 1-2 lineas.
 
-## Chronicle
+## Cronica
 
-*Write the narrative of the session here.*
+*Escribe aqui la narrativa de la sesion.*
 
-## Encounters
+## Encuentros
 
-- **Encounter name:** Brief description and outcome.
+- **Nombre del encuentro:** Descripcion breve y resultado.
 
-## Characters
+## Personajes
 
-| Character | Highlight |
+| Personaje | Momento destacado |
 |-----------|-----------|
-| **Name** | What they did this session |
+| **Nombre** | Que hizo en esta sesion |
 
-## Loot & Rewards
+## Botin y recompensas
 
-- Item or reward gained
+- Objeto o recompensa obtenida
 
-## Foreshadowing & Clues
+## Presagios y pistas
 
-- Clues, names, threats, or unresolved threads for future sessions.
+- Pistas, nombres, amenazas o hilos sin resolver para futuras sesiones.
 
-## Notes
+## Notas
 
-*Out-of-game notes, rules questions, things to remember.*
+*Notas fuera de juego, dudas de reglas, cosas a recordar.*
