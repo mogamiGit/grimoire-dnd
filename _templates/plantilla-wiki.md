@@ -9,8 +9,8 @@ date: "{{date}}"
 
 # {{title}}
 
-## Descripcion
+## Description
 
-## Notas
+## Notes
 
-## Referencias
+## References

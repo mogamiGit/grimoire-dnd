@@ -1,20 +1,42 @@
 ---
-title: "Sesion {{date}}"
+title: "Session {{date}}"
 publish: false
 tags:
-  - diario
+  - diary
+  - character/
+  - campaign/
 description: ""
 date: "{{date}}"
+location: ""
 ---
 
-# Sesion del {{date}}
+# Session {{date}}
 
-## Resumen
+> [!summary]
+> Brief summary of the session in 1-2 lines.
 
-## Eventos clave
+## Chronicle
 
-## PNJs encontrados
+*Write the narrative of the session here.*
 
-## Botin / Recompensas
+## Encounters
 
-## Notas para la proxima sesion
+- **Encounter name:** Brief description and outcome.
+
+## Characters
+
+| Character | Highlight |
+|-----------|-----------|
+| **Name** | What they did this session |
+
+## Loot & Rewards
+
+- Item or reward gained
+
+## Foreshadowing & Clues
+
+- Clues, names, threats, or unresolved threads for future sessions.
+
+## Notes
+
+*Out-of-game notes, rules questions, things to remember.*
