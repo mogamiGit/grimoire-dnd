@@ -1,3 +1,9 @@
+# Session Defaults
+
+- **Caveman mode**: Always active (full). Respond terse, drop filler, fragments OK. Technical substance stays.
+- **Lexis MCP**: Always use Lexis tools (`search_code`, `get_symbol`, `read_file`, `find_references`, etc.) instead of Read/Grep/Glob for code search. Lexis is ~10x more token-efficient.
+- **Language**: Respond in Spanish when discussing content. English for code/commits/technical.
+
 # Grimoire DnD — Project Context
 
 ## What Is This
