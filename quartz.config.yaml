@@ -16,6 +16,7 @@ configuration:
     - .obsidian
     - quartz
     - node_modules
+    - plugins
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
@@ -182,6 +183,16 @@ plugins:
       position: left
       priority: 35
       group: toolbar
+  - source: ./plugins/custom/character-cards
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 25
+  - source: ./plugins/custom/character-sheets
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 26
   - source: github:quartz-community/breadcrumbs
     enabled: true
     layout:
