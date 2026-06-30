@@ -6,8 +6,10 @@
 
 # Node / Quartz
 node_modules/
+dist/
 public/
 .quartz/
+quartz/.quartz-cache/
 
 # OS
 .DS_Store
