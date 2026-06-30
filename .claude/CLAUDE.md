@@ -82,6 +82,11 @@ Content uses Obsidian `[[wikilinks]]` syntax. CI validates all wikilinks resolve
 All narrative content is in **Spanish**. Write new content in Spanish unless told otherwise.
 Commit messages and code comments in English.
 
+## Git Commits
+
+- **No body/description** — subject line only
+- **No Co-Authored-By** — never add co-author trailers
+
 ## Key Files
 
 | File | Purpose |
