@@ -14,5 +14,8 @@ grimoire-astro/dist/
 .DS_Store
 Thumbs.db
 
+# Claude Code
+.claude/settings.local.json
+
 # Sensitive
 .env

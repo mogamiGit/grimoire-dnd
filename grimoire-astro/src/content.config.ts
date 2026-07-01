@@ -7,7 +7,7 @@ export const collections = {
 		schema: docsSchema({
 			extend: z.object({
 				// D&D character fields
-				tags: z.array(z.string()).optional(),
+				tags: z.array(z.string()).min(1).optional(),
 				publish: z.boolean().optional(),
 				date: z.coerce.date().optional(),
 				clase: z.string().optional(),
