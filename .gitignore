@@ -7,6 +7,9 @@
 # Node
 node_modules/
 
+# Astro build output
+grimoire-astro/dist/
+
 # OS
 .DS_Store
 Thumbs.db
