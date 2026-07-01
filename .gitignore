@@ -4,12 +4,8 @@
 .obsidian/cache/
 .obsidian/plugins/obsidian-git/
 
-# Node / Quartz
+# Node
 node_modules/
-dist/
-public/
-.quartz/
-quartz/.quartz-cache/
 
 # OS
 .DS_Store
