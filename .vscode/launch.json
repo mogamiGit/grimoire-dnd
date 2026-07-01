@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dev Server (Quartz)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "./dev.sh",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
