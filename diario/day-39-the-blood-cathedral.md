@@ -13,7 +13,7 @@ campaign_day: 39
 
 # Day 39 - The Blood Cathedral
 
-> [!summary]
+> [!note]
 > El grupo se enfrenta a una serpiente colosal, descubre incienso de pesadillas, engaña a los guardias yuanti y asalta una catedral de sangre llena de guerreros serpiente. Un mago yuanti bífido casi los aniquila, pero el doble crítico de Sombravelo y los cuernos de Pisoni cambian el rumbo. Bruska se queda atrás para liberar a los esclavos.
 
 ## Cronica

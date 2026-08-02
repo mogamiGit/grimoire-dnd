@@ -166,7 +166,7 @@ const show = hasTraits || hasStrengthsWeaknesses || alineamiento || clase || raz
     margin: 0 0 2rem;
     border: 2px solid var(--sl-color-accent);
     border-radius: 8px;
-    background: var(--sl-color-gray-1);
+    background: var(--sl-color-gray-8);
     overflow: hidden;
   }
   .cs-header {
@@ -182,13 +182,13 @@ const show = hasTraits || hasStrengthsWeaknesses || alineamiento || clase || raz
     margin: 0;
     font-size: 1rem;
     font-family: var(--sl-font-headings);
-    color: var(--sl-color-gray-7);
+    color: var(--sl-color-gray-8);
     font-weight: 600;
   }
   .cs-header__detail {
     margin: 0.15rem 0 0;
     font-size: 0.85rem;
-    color: var(--sl-color-gray-4);
+    color: var(--sl-color-gray-2);
     font-style: italic;
   }
   .cs-body {
@@ -220,7 +220,7 @@ const show = hasTraits || hasStrengthsWeaknesses || alineamiento || clase || raz
     margin: 0;
     font-size: 0.85rem;
     line-height: 1.4;
-    color: var(--sl-color-gray-6);
+    color: var(--sl-color-gray-8);
   }
   .cs-personality { margin-top: 0.4rem; }
   .cs-personality__bars {
@@ -240,13 +240,14 @@ const show = hasTraits || hasStrengthsWeaknesses || alineamiento || clase || raz
     white-space: nowrap;
     width: 6rem;
     flex-shrink: 0;
+    color: var(--sl-color-gray-2);
   }
   .cs-bar__label--low { text-align: right; }
   .cs-bar__label--high { text-align: left; }
   .cs-bar__track {
     flex: 1;
     height: 0.5rem;
-    background: var(--sl-color-gray-3);
+    background: var(--sl-color-gray-6);
     border-radius: 4px;
     overflow: hidden;
     min-width: 4rem;
@@ -259,6 +260,7 @@ const show = hasTraits || hasStrengthsWeaknesses || alineamiento || clase || raz
   }
   .cs-row {
     display: flex;
+    align-items: flex-start;
     gap: 2rem;
     padding: 1rem 1.25rem;
     border-top: 1px solid var(--sl-color-gray-3);
@@ -266,7 +268,7 @@ const show = hasTraits || hasStrengthsWeaknesses || alineamiento || clase || raz
   @media (max-width: 768px) {
     .cs-row { flex-direction: column; gap: 1rem; }
   }
-  .cs-row__section { flex: 1; }
+  .cs-row__section { flex: 1; margin: 0; padding: 0; }
   .cs-list {
     margin: 0;
     padding-left: 1.2rem;

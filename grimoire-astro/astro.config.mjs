@@ -5,6 +5,7 @@ import starlightObsidian, { obsidianSidebarEntries } from 'starlight-obsidian';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://dnd.mogamihub.xyz',
 	integrations: [
 		starlight({
 			title: 'Grimoire DnD',

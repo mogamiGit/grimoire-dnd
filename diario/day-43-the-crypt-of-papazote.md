@@ -13,7 +13,7 @@ campaign_day: 43
 
 # Day 43 - The Crypt of Papazote
 
-> [!summary]
+> [!note]
 > El grupo se enfrenta a un guardián eléctrico en una fuente mágica y a un golem de carne que Karlach decapita con su hacha. Descubren la cripta de Papazote, donde Maedre desactiva las trampas arrodillándose ante la estatua sin cabeza. Kairi recibe un espíritu al coger un medallón. Encuentran al último superviviente del estandarte amarillo. Una nube de langostas revela los huesos de Powder, destrozando emocionalmente al grupo.
 
 ## Cronica

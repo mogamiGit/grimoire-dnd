@@ -13,7 +13,7 @@ campaign_day: 37
 
 # Day 37-38 - The Alliance of the Ones
 
-> [!summary]
+> [!note]
 > El grupo explora templos en islas de lava y recupera los cubos de Moa y Obolaká. Cruzan cuerdas sobre lava, portales de sol y luna, y se enfrentan a oseznos y hombres serpiente. Infiltran la fortaleza yuanti haciéndose pasar por avanzadilla de un ejército mayor y rescatan a Kai de sus captores. Un levantamiento de esclavos se está gestando en el interior.
 
 ## Cronica
