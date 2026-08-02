@@ -18,7 +18,7 @@ tags:
 
 # Day 40 - The Siege of the Serpent Fortress
 
-:::tip
+:::note
 El grupo asalta de nuevo la fortaleza yuanti para encontrar a Ruska y recuperar el cubo de I'Jink. Tres hombres serpiente les cierran el paso pero Pisoni derriba la puerta. Una batalla caótica se desata con oleadas de guerreros serpiente y el maldito gong. Kai muere en combate. Pisoni resucita milagrosamente y saca críticos épicos. Sombravelo se rinde, fuma un piti, y luego vuelve a la pelea. Los esclavos liderados por Ruska dan la vuelta a la batalla. 30 minutos de combate puro.
 :::
 

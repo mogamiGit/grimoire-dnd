@@ -17,7 +17,7 @@ tags:
 
 # Day 43 - Powder's Farewell and the Stranger from the Future
 
-:::tip
+:::note
 Kairi y Maedre rinden homenaje al cadáver de Powder, recuperando su calavera, un libro y cartas personales. Tras enfrentarse a moho morado con ojos y trampas de baldosas, un misterioso orco llamado Indirak Tonks aparece desde la sala donde murió Powder, afirmando venir del futuro. El grupo derrota a Mustio, el guardián no muerto de la tumba, y obtiene valiosos objetos mágicos.
 :::
 

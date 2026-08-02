@@ -17,7 +17,7 @@ tags:
 
 # Day 43 - The Frog God and the Possessed
 
-:::tip
+:::note
 El grupo desciende al tercer nivel de la tumba, encuentra un ídolo de calavera dorada y resuelve el acertijo del dios rana Kunamoth. Las máscaras de rana transforman a Kairi, Karlach e Indirak en ranas mientras espectros les atacan. Indirak es poseído por los brazaletes malditos del sarcófago, recibiendo a Kuzabán en su interior. Más abajo, un trono de carne y murales inquietantes les esperan.
 :::
 

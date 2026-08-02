@@ -17,7 +17,7 @@ tags:
 
 # Day 42 - The Obelisk and Obolaká
 
-:::tip
+:::note
 Kradoc es llamado de vuelta a su planeta y Karlach emerge del círculo de teleportación como reemplazo. El grupo descifra el obelisco, atraviesa trampas de aceite, puzzles de cubos, dardos venenosos y un demonio oculto en una estatua. Powder es poseída por Obolaká al tocar un anillo en un sarcófago. En las profundidades, Maedre descubre enanos oscuros construyendo un golem de carne.
 :::
 
