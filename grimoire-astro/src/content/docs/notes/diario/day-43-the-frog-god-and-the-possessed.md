@@ -1,20 +1,25 @@
 ---
 title: Day 43 - The Frog God and the Possessed
+editUrl: false
 publish: true
+date: 2026-04-12
+location: Tomb of the Nine Gods / Level 3
+campaign_day: 43
+description: The group descends deeper into the tomb, discovers a golden skull
+  idol, solves the riddle of the frog god Kunamoth, and Indirak is possessed by
+  cursed bracers from a sarcophagus. A throne of flesh and haunting murals await
+  below.
 tags:
   - diary
   - character/sombravelo
   - campaign/tomb-of-annihilation
-description: The group descends deeper into the tomb, discovers a golden skull idol, solves the riddle of the frog god Kunamoth, and Indirak is possessed by cursed bracers from a sarcophagus. A throne of flesh and haunting murals await below.
-date: 2026-04-12
-location: Tomb of the Nine Gods / Level 3
-campaign_day: 43
 ---
 
 # Day 43 - The Frog God and the Possessed
 
-> [!note]
-> El grupo desciende al tercer nivel de la tumba, encuentra un ídolo de calavera dorada y resuelve el acertijo del dios rana Kunamoth. Las máscaras de rana transforman a Kairi, Karlach e Indirak en ranas mientras espectros les atacan. Indirak es poseído por los brazaletes malditos del sarcófago, recibiendo a Kuzabán en su interior. Más abajo, un trono de carne y murales inquietantes les esperan.
+:::note
+El grupo desciende al tercer nivel de la tumba, encuentra un ídolo de calavera dorada y resuelve el acertijo del dios rana Kunamoth. Las máscaras de rana transforman a Kairi, Karlach e Indirak en ranas mientras espectros les atacan. Indirak es poseído por los brazaletes malditos del sarcófago, recibiendo a Kuzabán en su interior. Más abajo, un trono de carne y murales inquietantes les esperan.
+:::
 
 ## Cronica
 
@@ -102,36 +107,36 @@ La tumba seguía revelando sus secretos, capa tras capa, horror tras horror. Y e
 
 ## Encuentros
 
-- **Esqueleto con llave pentagonal:** Indirak lo pulverizó y se hizo con la llave sin contemplaciones.
-- **Espectros del sarcófago de Kunamoth:** Se activaron al tocar las ofrendas. Drenaban vida máxima. Las máscaras de rana transformaron a Kairi, Karlach e Indirak en ranas.
-- **Bichos de la puerta de piedra (x6):** No muertos con lenguas largas, ultra apestosos. Surgieron al forzar la puerta. Combate rápido y contundente.
+* **Esqueleto con llave pentagonal:** Indirak lo pulverizó y se hizo con la llave sin contemplaciones.
+* **Espectros del sarcófago de Kunamoth:** Se activaron al tocar las ofrendas. Drenaban vida máxima. Las máscaras de rana transformaron a Kairi, Karlach e Indirak en ranas.
+* **Bichos de la puerta de piedra (x6):** No muertos con lenguas largas, ultra apestosos. Surgieron al forzar la puerta. Combate rápido y contundente.
 
 ## Personajes
 
-| Personaje | Momento destacado |
-|-----------|-----------|
-| **Indirak** | Pulverizó al esqueleto por la llave, pinchó a Kairi-rana 12 veces para destransformarla, fue poseído por Kuzabán al tocar los brazaletes |
-| **Karlach** | Fue por libre al pasillo del moho morado, se comió una cucaracha como ofrenda, ofreció sangre al sarcófago |
-| **Kairi** | Transformada en rana y lloró en rana, encendió la vela verde, brote psicótico al ver el mural de la muerte de Powder |
-| **Maedre** | Portador de Obolaká, recibió advertencia sobre las máscaras de rana, bajó solo a buscar al grupo a la sala de las dos puertas, se encontró con el tapiz rojo gigante, Obolaká le advirtió no tocar el cetro del minotauro |
-| **Obolaká** | Advirtió a Maedre sobre las máscaras de rana (tarde) y sobre no tocar el cetro del minotauro |
+| Personaje   | Momento destacado                                                                                                                                                                                                         |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Indirak** | Pulverizó al esqueleto por la llave, pinchó a Kairi-rana 12 veces para destransformarla, fue poseído por Kuzabán al tocar los brazaletes                                                                                  |
+| **Karlach** | Fue por libre al pasillo del moho morado, se comió una cucaracha como ofrenda, ofreció sangre al sarcófago                                                                                                                |
+| **Kairi**   | Transformada en rana y lloró en rana, encendió la vela verde, brote psicótico al ver el mural de la muerte de Powder                                                                                                      |
+| **Maedre**  | Portador de Obolaká, recibió advertencia sobre las máscaras de rana, bajó solo a buscar al grupo a la sala de las dos puertas, se encontró con el tapiz rojo gigante, Obolaká le advirtió no tocar el cetro del minotauro |
+| **Obolaká** | Advirtió a Maedre sobre las máscaras de rana (tarde) y sobre no tocar el cetro del minotauro                                                                                                                              |
 
 ## Botin y recompensas
 
-- Manual de golems de carne (objeto mágico, no requiere sintonización, pero daña al usuario si le supera)
-- Calavera dorada (dejada en el pedestal para más tarde)
-- Llave pentagonal (del esqueleto)
-- Brazaletes malditos del sarcófago (ahora fusionados con Indirak / Kuzabán)
-- Cetro de metal del trono (NO tocado — pertenece al campeón minotauro)
+* Manual de golems de carne (objeto mágico, no requiere sintonización, pero daña al usuario si le supera)
+* Calavera dorada (dejada en el pedestal para más tarde)
+* Llave pentagonal (del esqueleto)
+* Brazaletes malditos del sarcófago (ahora fusionados con Indirak / Kuzabán)
+* Cetro de metal del trono (NO tocado — pertenece al campeón minotauro)
 
 ## Presagios y pistas
 
-- **Kuzabán posee a Indirak** — un espíritu antiguo habita ahora dentro de él. ¿Qué consecuencias tendrá?
-- **La calavera dorada** — dejada atrás. ¿Trampa o tesoro?
-- **El cetro del minotauro** — Obolaká advierte no tocarlo. ¿Para qué sirve?
-- **Los murales de los muertos vivientes** — pintan escenas de muertes reales, incluyendo la de Powder. ¿Quién les ordena pintar?
-- **La inscripción del dintel** — aún sin descifrar. ¿Qué aguarda en el pasillo de las serpientes de bronce?
-- **El mural del estandarte amarillo** — un grupo ahogado en veneno. ¿Premonición o historia?
+* **Kuzabán posee a Indirak** — un espíritu antiguo habita ahora dentro de él. ¿Qué consecuencias tendrá?
+* **La calavera dorada** — dejada atrás. ¿Trampa o tesoro?
+* **El cetro del minotauro** — Obolaká advierte no tocarlo. ¿Para qué sirve?
+* **Los murales de los muertos vivientes** — pintan escenas de muertes reales, incluyendo la de Powder. ¿Quién les ordena pintar?
+* **La inscripción del dintel** — aún sin descifrar. ¿Qué aguarda en el pasillo de las serpientes de bronce?
+* **El mural del estandarte amarillo** — un grupo ahogado en veneno. ¿Premonición o historia?
 
 ## Notas
 

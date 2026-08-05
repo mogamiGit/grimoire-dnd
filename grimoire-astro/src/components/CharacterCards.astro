@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import StatusBadge from './StatusBadge.astro';
+
+const allDocs = await getCollection('docs');
+
+const characters = allDocs.filter((doc) => {
+  const tags = doc.data.tags as string[] | undefined;
+  return Array.isArray(tags) && tags.includes('personaje/jugador')
+    && doc.id.startsWith('notes/wiki/personajes/')
+    && doc.id !== 'notes/wiki/personajes/index';
+});
+
+characters.sort((a, b) => {
+  const titleA = (a.data.title as string) ?? '';
+  const titleB = (b.data.title as string) ?? '';
+  return titleA.localeCompare(titleB, 'es');
+});
+---
+
+{characters.length > 0 && (
+  <div class="character-cards">
+    <div class="character-cards__grid">
+      {characters.map((char) => {
+        const title = (char.data.title as string) ?? 'Sin nombre';
+        const nickname = char.data.nickname as string | undefined;
+        const estado = char.data.estado as string | undefined;
+        const slug = char.id.replace(/^notes\//, '');
+
+        return (
+          <a href={`/${char.id}/`} class="character-card">
+            <div class="character-card__header">
+              <div>
+                <h3 class="character-card__name">{title}</h3>
+                {nickname && <p class="character-card__nickname">({nickname})</p>}
+              </div>
+              <StatusBadge estado={estado} fallback="vivo" />
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+)}
+
+<style>
+  .character-cards { margin: 1.5rem 0; }
+  .character-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  @media (max-width: 600px) {
+    .character-cards__grid { grid-template-columns: 1fr; }
+  }
+  .character-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 150px;
+    padding: 1.25rem;
+    border: 2px solid var(--sl-color-gray-4);
+    border-radius: 8px;
+    background: var(--sl-color-gray-6);
+    text-decoration: none;
+    color: var(--sl-color-gray-1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .character-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px var(--sl-color-gray-6);
+    border-color: var(--sl-color-accent);
+  }
+  .character-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+  .character-card__name {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: var(--sl-font-headings);
+    color: var(--sl-color-gray-1);
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .character-card__nickname {
+    margin: 0;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--sl-color-gray-4);
+    line-height: 1.2;
+  }
+</style>

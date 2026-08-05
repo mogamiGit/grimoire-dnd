@@ -1,0 +1,37 @@
+---
+interface Props {
+  estado?: string;
+  fallback?: string;
+}
+
+const STATUS_LABELS: Record<string, string> = {
+  vivo: '♥ Vivo',
+  muerto: '💀 Muerto',
+  desaparecido: '👁 Desaparecido',
+};
+
+const { estado, fallback } = Astro.props;
+const status = estado || fallback;
+const label = status ? (STATUS_LABELS[status] ?? status) : null;
+const cssClass = status && STATUS_LABELS[status] ? status : 'otro';
+---
+
+{label && <span class={`status-badge status-badge--${cssClass}`}>{label}</span>}
+
+<style>
+  .status-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .status-badge--vivo { background: #2d6a2e; color: #e8f5e9; }
+  .status-badge--muerto { background: #8b2020; color: #fce4ec; }
+  .status-badge--desaparecido { background: #b8860b; color: #fff8e1; }
+  .status-badge--otro { background: var(--sl-color-gray-4); color: var(--sl-color-gray-1); }
+</style>

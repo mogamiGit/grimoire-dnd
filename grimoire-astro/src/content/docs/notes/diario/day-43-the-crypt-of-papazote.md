@@ -1,20 +1,25 @@
 ---
 title: Day 43 - The Crypt of Papazote
+editUrl: false
 publish: true
+date: 2026-01-18
+location: Tomb of the Nine Gods / Level 2-3
+campaign_day: 43
+description: The group battles electric guardians, a flesh golem, and navigates
+  deadly traps. They discover the crypt of Papazote and Kairi receives a
+  mysterious spirit. A locust swarm reveals Powder's skeletal remains,
+  shattering the group.
 tags:
   - diary
   - character/sombravelo
   - campaign/tomb-of-annihilation
-description: The group battles electric guardians, a flesh golem, and navigates deadly traps. They discover the crypt of Papazote and Kairi receives a mysterious spirit. A locust swarm reveals Powder's skeletal remains, shattering the group.
-date: 2026-01-18
-location: Tomb of the Nine Gods / Level 2-3
-campaign_day: 43
 ---
 
 # Day 43 - The Crypt of Papazote
 
-> [!note]
-> El grupo se enfrenta a un guardián eléctrico en una fuente mágica y a un golem de carne que Karlach decapita con su hacha. Descubren la cripta de Papazote, donde Maedre desactiva las trampas arrodillándose ante la estatua sin cabeza. Kairi recibe un espíritu al coger un medallón. Encuentran al último superviviente del estandarte amarillo. Una nube de langostas revela los huesos de Powder, destrozando emocionalmente al grupo.
+:::note
+El grupo se enfrenta a un guardián eléctrico en una fuente mágica y a un golem de carne que Karlach decapita con su hacha. Descubren la cripta de Papazote, donde Maedre desactiva las trampas arrodillándose ante la estatua sin cabeza. Kairi recibe un espíritu al coger un medallón. Encuentran al último superviviente del estandarte amarillo. Una nube de langostas revela los huesos de Powder, destrozando emocionalmente al grupo.
+:::
 
 ## Cronica
 
@@ -100,38 +105,38 @@ Lo que encontraron dentro tendría que esperar. En ese momento, lo único que im
 
 ## Encuentros
 
-- **Guardián eléctrico de la fuente:** Karlach absorbió la descarga como esponja. Kairi lo desintegró con un rayo gris devastador.
-- **Golem de carne:** Apareció por detrás tras la visión de la fuente. Powder descubrió su debilidad al fuego. Karlach lo decapitó con su hacha.
-- **Muertos vivientes encadenados por la boca:** Eliminados. Podrían haber servido para abrir la puerta.
-- **Nube de langostas (trampa de baldosa):** Karlach pisó la baldosa equivocada. Daño masivo a todo el grupo. Reveló los restos de Powder.
+* **Guardián eléctrico de la fuente:** Karlach absorbió la descarga como esponja. Kairi lo desintegró con un rayo gris devastador.
+* **Golem de carne:** Apareció por detrás tras la visión de la fuente. Powder descubrió su debilidad al fuego. Karlach lo decapitó con su hacha.
+* **Muertos vivientes encadenados por la boca:** Eliminados. Podrían haber servido para abrir la puerta.
+* **Nube de langostas (trampa de baldosa):** Karlach pisó la baldosa equivocada. Daño masivo a todo el grupo. Reveló los restos de Powder.
 
 ## Personajes
 
-| Personaje | Momento destacado |
-|-----------|-----------|
-| **Karlach** | Esponja de daño contra el guardián eléctrico, se lavó la cara en la fuente activando al golem, decapitó al golem con su hacha, pisó la baldosa que activó las langostas |
-| **Kairi** | Rayo gris devastador al guardián, encontró puerta secreta, recibió a la guille al coger el medallón de Papazote, al borde de la locura al ver los huesos de Powder |
-| **Maedre** | Detectó la puerta secreta de la fuente, se arrodilló ante la estatua sin cabeza desactivando las trampas de Papazote |
-| **Powder** | Descubrió que el fuego dañaba al golem. Sus restos fueron encontrados como huesitos tras la nube de langostas |
-| **Doblin Badby** | Cadáver del último superviviente del estandarte amarillo. Reveló info sobre gárgola de 4 brazos, princesa elfa perdida, y doppelganger traidor |
+| Personaje        | Momento destacado                                                                                                                                                       |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Karlach**      | Esponja de daño contra el guardián eléctrico, se lavó la cara en la fuente activando al golem, decapitó al golem con su hacha, pisó la baldosa que activó las langostas |
+| **Kairi**        | Rayo gris devastador al guardián, encontró puerta secreta, recibió a la guille al coger el medallón de Papazote, al borde de la locura al ver los huesos de Powder      |
+| **Maedre**       | Detectó la puerta secreta de la fuente, se arrodilló ante la estatua sin cabeza desactivando las trampas de Papazote                                                    |
+| **Powder**       | Descubrió que el fuego dañaba al golem. Sus restos fueron encontrados como huesitos tras la nube de langostas                                                           |
+| **Doblin Badby** | Cadáver del último superviviente del estandarte amarillo. Reveló info sobre gárgola de 4 brazos, princesa elfa perdida, y doppelganger traidor                          |
 
 ## Botin y recompensas
 
-- Bastón con cabeza de cobra (de Doblin Badby)
-- Medallón de Papazote (Kairi — contiene el espíritu de la guille)
-- Tesoros del sarcófago de Papazote
-- Joyas del cadáver del enano de la compañía
-- Información: gárgola de 4 brazos, princesa elfa perdida, Acererak es embaucador, doppelganger infiltrado
+* Bastón con cabeza de cobra (de Doblin Badby)
+* Medallón de Papazote (Kairi — contiene el espíritu de la guille)
+* Tesoros del sarcófago de Papazote
+* Joyas del cadáver del enano de la compañía
+* Información: gárgola de 4 brazos, princesa elfa perdida, Acererak es embaucador, doppelganger infiltrado
 
 ## Presagios y pistas
 
-- **La guille posee a Kairi** — otro espíritu dentro de otro miembro del grupo. ¿Cuántos más hay?
-- **Gárgola de 4 brazos** — acecha en algún lugar de la tumba.
-- **Princesa elfa perdida** — ¿sigue viva en algún nivel inferior?
-- **Acererak es un embaucador** — nada en la tumba es lo que parece. Doppelgangers posibles.
-- **La esfera suspendida** — vista en la fuente. Sala circular de mármol con tesoros. ¿Dónde está?
-- **El ataúd de oro** — el dios de Kairi dijo que no había nada. ¿Verdad o engaño?
-- **Powder está muerta** — sus huesos yacen en la sala de las esfinges. El grupo tendrá que decidir qué hacer con sus restos.
+* **La guille posee a Kairi** — otro espíritu dentro de otro miembro del grupo. ¿Cuántos más hay?
+* **Gárgola de 4 brazos** — acecha en algún lugar de la tumba.
+* **Princesa elfa perdida** — ¿sigue viva en algún nivel inferior?
+* **Acererak es un embaucador** — nada en la tumba es lo que parece. Doppelgangers posibles.
+* **La esfera suspendida** — vista en la fuente. Sala circular de mármol con tesoros. ¿Dónde está?
+* **El ataúd de oro** — el dios de Kairi dijo que no había nada. ¿Verdad o engaño?
+* **Powder está muerta** — sus huesos yacen en la sala de las esfinges. El grupo tendrá que decidir qué hacer con sus restos.
 
 ## Notas
 

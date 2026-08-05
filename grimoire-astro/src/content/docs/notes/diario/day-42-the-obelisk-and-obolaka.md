@@ -1,20 +1,25 @@
 ---
 title: Day 42 - The Obelisk and Obolaká
+editUrl: false
 publish: true
+date: 2026-01-03
+location: Tomb of the Nine Gods / Level 1-2
+campaign_day: 42
+description: Kradoc departs and Karlach arrives through a teleportation circle.
+  The group explores the tomb's upper levels, discovers the obelisk's cryptic
+  message, faces demons, solves puzzles, and Powder is possessed by Obolaká's
+  spirit. Maedre discovers dark dwarves building a flesh golem.
 tags:
   - diary
   - character/sombravelo
   - campaign/tomb-of-annihilation
-description: Kradoc departs and Karlach arrives through a teleportation circle. The group explores the tomb's upper levels, discovers the obelisk's cryptic message, faces demons, solves puzzles, and Powder is possessed by Obolaká's spirit. Maedre discovers dark dwarves building a flesh golem.
-date: 2026-01-03
-location: Tomb of the Nine Gods / Level 1-2
-campaign_day: 42
 ---
 
 # Day 42 - The Obelisk and Obolaká
 
-> [!note]
-> Kradoc es llamado de vuelta a su planeta y Karlach emerge del círculo de teleportación como reemplazo. El grupo descifra el obelisco, atraviesa trampas de aceite, puzzles de cubos, dardos venenosos y un demonio oculto en una estatua. Powder es poseída por Obolaká al tocar un anillo en un sarcófago. En las profundidades, Maedre descubre enanos oscuros construyendo un golem de carne.
+:::note
+Kradoc es llamado de vuelta a su planeta y Karlach emerge del círculo de teleportación como reemplazo. El grupo descifra el obelisco, atraviesa trampas de aceite, puzzles de cubos, dardos venenosos y un demonio oculto en una estatua. Powder es poseída por Obolaká al tocar un anillo en un sarcófago. En las profundidades, Maedre descubre enanos oscuros construyendo un golem de carne.
+:::
 
 ## Cronica
 
@@ -98,38 +103,38 @@ Se fueron pitando antes de que llegaran más enanos.
 
 ## Encuentros
 
-- **Trampa de aceite en las estatuas:** El aceite estalló en llamas al acercarse. Esquivado.
-- **Dardos venenosos:** Powder activó una placa de presión al ser lanzada por Karlach. Kairi detectó las losetas trampa.
-- **Demonio de la cabeza gigante:** Oculto tras oscuridad y silencio mágicos. Kairi disipó ambos. Derrotado con radiante, hacha y fuego.
-- **6 muertos vivientes de la cámara del disco:** Se activaron cuando el ojo detectó a Powder. Las máscaras protegían de los ojos. Kairi usó espíritus guardianes, Karlach furia en llamas.
-- **5 enanos oscuros:** Descubiertos por Maedre construyendo un golem de carne. Combate con drenaje de vida. Victoria del grupo.
+* **Trampa de aceite en las estatuas:** El aceite estalló en llamas al acercarse. Esquivado.
+* **Dardos venenosos:** Powder activó una placa de presión al ser lanzada por Karlach. Kairi detectó las losetas trampa.
+* **Demonio de la cabeza gigante:** Oculto tras oscuridad y silencio mágicos. Kairi disipó ambos. Derrotado con radiante, hacha y fuego.
+* **6 muertos vivientes de la cámara del disco:** Se activaron cuando el ojo detectó a Powder. Las máscaras protegían de los ojos. Kairi usó espíritus guardianes, Karlach furia en llamas.
+* **5 enanos oscuros:** Descubiertos por Maedre construyendo un golem de carne. Combate con drenaje de vida. Victoria del grupo.
 
 ## Personajes
 
-| Personaje | Momento destacado |
-|-----------|-----------|
-| **Karlach** | Llegó como reemplazo de Kradoc, lanzó a Powder contra la sala de dardos, rompió cristal, furia en llamas contra muertos vivientes, descubrió 2 puertas secretas (una le explotó en la cara), desactivó trampa a ostias |
-| **Powder** | Lloró la partida de Kradoc, resolvió puzzle de cubos, saltó épicamente a la cámara activando los muertos, fue poseída por Obolaká al tocar el anillo, guardó un secreto |
-| **Kairi** | Detectó losetas trampa, disipó oscuridad y silencio del demonio, espíritus guardianes contra no-muertos, desactivó trampa con magia, guardó la llave triangular |
-| **Maedre** | Usó el colgante-ojo para encontrar pasadizo secreto, tiró palanca con mano de mago evitando el foso, se puso máscara para evitar los ojos, descubrió puerta secreta con sigilo, encontró a los enanos oscuros construyendo golem de carne |
-| **Kradoc** | Se despidió y se fue por el círculo de teleportación. Misión en otro planeta. |
+| Personaje   | Momento destacado                                                                                                                                                                                                                         |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Karlach** | Llegó como reemplazo de Kradoc, lanzó a Powder contra la sala de dardos, rompió cristal, furia en llamas contra muertos vivientes, descubrió 2 puertas secretas (una le explotó en la cara), desactivó trampa a ostias                    |
+| **Powder**  | Lloró la partida de Kradoc, resolvió puzzle de cubos, saltó épicamente a la cámara activando los muertos, fue poseída por Obolaká al tocar el anillo, guardó un secreto                                                                   |
+| **Kairi**   | Detectó losetas trampa, disipó oscuridad y silencio del demonio, espíritus guardianes contra no-muertos, desactivó trampa con magia, guardó la llave triangular                                                                           |
+| **Maedre**  | Usó el colgante-ojo para encontrar pasadizo secreto, tiró palanca con mano de mago evitando el foso, se puso máscara para evitar los ojos, descubrió puerta secreta con sigilo, encontró a los enanos oscuros construyendo golem de carne |
+| **Kradoc**  | Se despidió y se fue por el círculo de teleportación. Misión en otro planeta.                                                                                                                                                             |
 
 ## Botin y recompensas
 
-- Colgante con ojo de Unk (ayuda a descubrir cosas ocultas — lo lleva Maedre)
-- Anillo mágico de Obolaká (Powder — efectos desconocidos/secreto)
-- Llave triangular metálica (del esqueleto — guardada por Kairi)
-- Lámpara con alma de elfo de la noche
+* Colgante con ojo de Unk (ayuda a descubrir cosas ocultas — lo lleva Maedre)
+* Anillo mágico de Obolaká (Powder — efectos desconocidos/secreto)
+* Llave triangular metálica (del esqueleto — guardada por Kairi)
+* Lámpara con alma de elfo de la noche
 
 ## Presagios y pistas
 
-- **Mensaje del obelisco** — "Ponte la máscara o serás visto. No digas la verdad al niño condenado. Las llaves solo activan el interior." Guía para sobrevivir la tumba.
-- **Obolaká posee a Powder** — el espíritu del oso se ha metido dentro de ella. Su alma se siente atraída hacia pisos inferiores.
-- **El secreto de Powder** — algo pasó con el anillo mágico que no quiere contar.
-- **Golem de carne en construcción** — los enanos oscuros bombeaban sangre con una dama de hierro. ¿Está terminado?
-- **El jorobado con máscara** — huyó al ver al grupo. ¿Quién es? ¿Volverá?
-- **Las llaves** — la pieza triangular es una. ¿Cuántas más hay? ¿Qué abren?
-- **Alma del elfo de la noche** — atrapada en una lámpara. ¿Se puede liberar?
+* **Mensaje del obelisco** — "Ponte la máscara o serás visto. No digas la verdad al niño condenado. Las llaves solo activan el interior." Guía para sobrevivir la tumba.
+* **Obolaká posee a Powder** — el espíritu del oso se ha metido dentro de ella. Su alma se siente atraída hacia pisos inferiores.
+* **El secreto de Powder** — algo pasó con el anillo mágico que no quiere contar.
+* **Golem de carne en construcción** — los enanos oscuros bombeaban sangre con una dama de hierro. ¿Está terminado?
+* **El jorobado con máscara** — huyó al ver al grupo. ¿Quién es? ¿Volverá?
+* **Las llaves** — la pieza triangular es una. ¿Cuántas más hay? ¿Qué abren?
+* **Alma del elfo de la noche** — atrapada en una lámpara. ¿Se puede liberar?
 
 ## Notas
 

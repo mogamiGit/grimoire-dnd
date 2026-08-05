@@ -1,20 +1,24 @@
 ---
 title: Day 37-38 - The Alliance of the Ones
+editUrl: false
 publish: true
+date: 2025-03-22
+location: Jungle Temples / Yuan-ti Fortress / Chult
+campaign_day: 37
+description: The group explores lava temples, recovers the cubes of Moa and
+  Obolaká, crosses treacherous terrain, infiltrates the yuan-ti fortress, and
+  rescues Kai from captivity. A slave uprising brews inside.
 tags:
   - diary
   - character/sombravelo
   - campaign/tomb-of-annihilation
-description: The group explores lava temples, recovers the cubes of Moa and Obolaká, crosses treacherous terrain, infiltrates the yuan-ti fortress, and rescues Kai from captivity. A slave uprising brews inside.
-date: 2025-03-22
-location: Jungle Temples / Yuan-ti Fortress / Chult
-campaign_day: 37
 ---
 
 # Day 37-38 - The Alliance of the Ones
 
-> [!note]
-> El grupo explora templos en islas de lava y recupera los cubos de Moa y Obolaká. Cruzan cuerdas sobre lava, portales de sol y luna, y se enfrentan a oseznos y hombres serpiente. Infiltran la fortaleza yuanti haciéndose pasar por avanzadilla de un ejército mayor y rescatan a Kai de sus captores. Un levantamiento de esclavos se está gestando en el interior.
+:::note
+El grupo explora templos en islas de lava y recupera los cubos de Moa y Obolaká. Cruzan cuerdas sobre lava, portales de sol y luna, y se enfrentan a oseznos y hombres serpiente. Infiltran la fortaleza yuanti haciéndose pasar por avanzadilla de un ejército mayor y rescatan a Kai de sus captores. Un levantamiento de esclavos se está gestando en el interior.
+:::
 
 ## Cronica
 
@@ -70,12 +74,12 @@ El grupo se quedó en el pasillo al atardecer del día 38, dentro de la fortalez
 
 ## Encuentros
 
-- **Pasillo de teselas (templo de lava):** Acrobacias para cruzar. Kairi falló y se arrastró. Kradoc pasó andando. No había trampa.
-- **4 oseznos (templo de Obolaká):** Siguieron al grupo en silencio. Kradoc les aplastó la cabeza con el martillo.
-- **Planta gigante (casa exterior):** Atacó al grupo. La dejaron pelada.
-- **Hombres serpiente (túnel subterráneo):** Primer grupo derrotado en combate.
-- **Yuantis (segundo grupo):** Engañados con historia de avanzadilla. Sin combate.
-- **Yuantis + hombres manos serpiente (x7) (rescate de Kai):** Batalla difícil. Victoria y rescate exitoso.
+* **Pasillo de teselas (templo de lava):** Acrobacias para cruzar. Kairi falló y se arrastró. Kradoc pasó andando. No había trampa.
+* **4 oseznos (templo de Obolaká):** Siguieron al grupo en silencio. Kradoc les aplastó la cabeza con el martillo.
+* **Planta gigante (casa exterior):** Atacó al grupo. La dejaron pelada.
+* **Hombres serpiente (túnel subterráneo):** Primer grupo derrotado en combate.
+* **Yuantis (segundo grupo):** Engañados con historia de avanzadilla. Sin combate.
+* **Yuantis + hombres manos serpiente (x7) (rescate de Kai):** Batalla difícil. Victoria y rescate exitoso.
 
 ## Personajes
 
@@ -89,18 +93,18 @@ El grupo se quedó en el pasillo al atardecer del día 38, dentro de la fortalez
 
 ## Botin y recompensas
 
-- Cubo de Moa (serpiente — cogido por Powder)
-- Cubo de Obolaká (oso — del templo sol/luna)
-- Estatua de humana petrificada (sacada del templo, sin efecto aparente)
+* Cubo de Moa (serpiente — cogido por Powder)
+* Cubo de Obolaká (oso — del templo sol/luna)
+* Estatua de humana petrificada (sacada del templo, sin efecto aparente)
 
 ## Presagios y pistas
 
-- **Levantamiento de esclavos** — se gesta una rebelión contra Ras'si/Venkata. ¿Ayudamos?
-- **Fentura** — yuanti que habla telepáticamente con Kai. ¿Aliada o traidora?
-- **La armería** — Fentura reveló su ubicación. Recurso clave si apoyan la rebelión.
-- **La nube negra** — sobre el edificio central de la fortaleza. ¿Qué es?
-- **La estatua petrificada** — ¿se puede despetrificar? ¿Quién era?
-- **"Mas nos enseña que los secretos esconden la verdad"** — mensaje del templo. ¿Relevante para los cubos?
+* **Levantamiento de esclavos** — se gesta una rebelión contra Ras'si/Venkata. ¿Ayudamos?
+* **Fentura** — yuanti que habla telepáticamente con Kai. ¿Aliada o traidora?
+* **La armería** — Fentura reveló su ubicación. Recurso clave si apoyan la rebelión.
+* **La nube negra** — sobre el edificio central de la fortaleza. ¿Qué es?
+* **La estatua petrificada** — ¿se puede despetrificar? ¿Quién era?
+* **"Mas nos enseña que los secretos esconden la verdad"** — mensaje del templo. ¿Relevante para los cubos?
 
 ## Notas
 

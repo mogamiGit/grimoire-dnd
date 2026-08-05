@@ -1,0 +1,281 @@
+---
+import StatusBadge from './StatusBadge.astro';
+
+interface PersonalidadAxes {
+  flexible_adoquin?: number | null;
+  miedica_temerario?: number | null;
+  desaborido_ladino?: number | null;
+  discapacidades_avispado?: number | null;
+  negado_acrobatico?: number | null;
+  sensato_lunatico?: number | null;
+}
+
+interface Props {
+  clase?: string;
+  raza?: string;
+  estado?: string;
+  alineamiento?: string;
+  personalidad?: PersonalidadAxes;
+  origen?: string;
+  ideales?: string;
+  lazos?: string;
+  defectos?: string;
+  puntos_fuertes?: string[];
+  puntos_debiles?: string[];
+}
+
+const PERSONALITY_AXES: Array<{ key: keyof PersonalidadAxes; low: string; high: string }> = [
+  { key: 'flexible_adoquin', low: 'Flexible', high: 'Adoquin' },
+  { key: 'miedica_temerario', low: 'Miedica', high: 'Temerario' },
+  { key: 'desaborido_ladino', low: 'Desaborido', high: 'Ladino' },
+  { key: 'discapacidades_avispado', low: 'Altas discapacidades', high: 'Avispado' },
+  { key: 'negado_acrobatico', low: 'Negado', high: 'Acrobatico' },
+  { key: 'sensato_lunatico', low: 'Sensato', high: 'Lunatico' },
+];
+
+function hasContent(arr?: string[]): boolean {
+  return Array.isArray(arr) && arr.length > 0 && arr[0] !== '';
+}
+
+function hasPersonalidad(p?: PersonalidadAxes): boolean {
+  if (!p || typeof p !== 'object') return false;
+  return PERSONALITY_AXES.some((axis) => {
+    const v = p[axis.key];
+    return typeof v === 'number' && v !== null;
+  });
+}
+
+function str(v?: string | null): string | undefined {
+  if (v === undefined || v === null) return undefined;
+  const trimmed = String(v).trim();
+  return trimmed === '' ? undefined : trimmed;
+}
+
+const { estado, personalidad, puntos_fuertes: rawFuertes, puntos_debiles: rawDebiles, ...rawStrings } = Astro.props;
+
+const clase = str(rawStrings.clase);
+const raza = str(rawStrings.raza);
+const alineamiento = str(rawStrings.alineamiento);
+const origen = str(rawStrings.origen);
+const ideales = str(rawStrings.ideales);
+const lazos = str(rawStrings.lazos);
+const defectos = str(rawStrings.defectos);
+const puntos_fuertes = rawFuertes;
+const puntos_debiles = rawDebiles;
+
+const hasPersonality = hasPersonalidad(personalidad);
+const hasTraits = hasPersonality || origen || ideales || lazos || defectos;
+const hasStrengthsWeaknesses = hasContent(puntos_fuertes) || hasContent(puntos_debiles);
+const subtitleParts = [clase, raza].filter(Boolean);
+const show = hasTraits || hasStrengthsWeaknesses || alineamiento || clase || raza;
+---
+
+{show && (
+  <div class="character-sheet">
+    <div class="cs-header">
+      <div class="cs-header__info">
+        {subtitleParts.length > 0 && <p class="cs-header__subtitle">{subtitleParts.join(' · ')}</p>}
+        {alineamiento && <p class="cs-header__detail">{alineamiento}</p>}
+      </div>
+      <StatusBadge estado={estado} />
+    </div>
+
+    {hasTraits && (
+      <div class="cs-body">
+        {(hasPersonality || origen) && (
+          <div class="cs-col cs-col--traits">
+            {origen && (
+              <div class="cs-traits__item">
+                <span class="cs-traits__label">Origen</span>
+                <p class="cs-traits__text">{origen}</p>
+              </div>
+            )}
+            {hasPersonality && personalidad && (
+              <div class="cs-personality">
+                <span class="cs-traits__label">Personalidad</span>
+                <div class="cs-personality__bars">
+                  {PERSONALITY_AXES.map((axis) => {
+                    const value = personalidad[axis.key];
+                    if (typeof value !== 'number') return null;
+                    const clamped = Math.max(0, Math.min(100, value));
+                    return (
+                      <div class="cs-bar">
+                        <span class="cs-bar__label cs-bar__label--low">{axis.low}</span>
+                        <div class="cs-bar__track">
+                          <div class="cs-bar__fill" style={`width: ${clamped}%`} />
+                        </div>
+                        <span class="cs-bar__label cs-bar__label--high">{axis.high}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+        {(ideales || lazos || defectos) && (
+          <div class="cs-col">
+            {ideales && (
+              <div class="cs-traits__item">
+                <span class="cs-traits__label">Ideales</span>
+                <p class="cs-traits__text">{ideales}</p>
+              </div>
+            )}
+            {lazos && (
+              <div class="cs-traits__item">
+                <span class="cs-traits__label">Lazos</span>
+                <p class="cs-traits__text">{lazos}</p>
+              </div>
+            )}
+            {defectos && (
+              <div class="cs-traits__item">
+                <span class="cs-traits__label">Defectos</span>
+                <p class="cs-traits__text">{defectos}</p>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    )}
+
+    {hasStrengthsWeaknesses && (
+      <div class="cs-row">
+        {hasContent(puntos_fuertes) && (
+          <div class="cs-row__section">
+            <span class="cs-traits__label">Puntos Fuertes</span>
+            <ul class="cs-list cs-list--strong">
+              {puntos_fuertes!.map((p) => <li>{p}</li>)}
+            </ul>
+          </div>
+        )}
+        {hasContent(puntos_debiles) && (
+          <div class="cs-row__section">
+            <span class="cs-traits__label">Puntos Debiles</span>
+            <ul class="cs-list cs-list--weak">
+              {puntos_debiles!.map((p) => <li>{p}</li>)}
+            </ul>
+          </div>
+        )}
+      </div>
+    )}
+  </div>
+)}
+
+<style>
+  .character-sheet {
+    margin: 0 0 2rem;
+    border: 2px solid var(--sl-color-accent);
+    border-radius: 8px;
+    background: var(--sl-color-gray-8);
+    overflow: hidden;
+  }
+  .cs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    border-bottom: 2px solid var(--sl-color-accent);
+    background: linear-gradient(135deg, rgba(139, 32, 32, 0.08), rgba(184, 134, 11, 0.08));
+  }
+  .cs-header__info { flex: 1; }
+  .cs-header__subtitle {
+    margin: 0;
+    font-size: 1rem;
+    font-family: var(--sl-font-headings);
+    color: var(--sl-color-gray-8);
+    font-weight: 600;
+  }
+  .cs-header__detail {
+    margin: 0.15rem 0 0;
+    font-size: 0.85rem;
+    color: var(--sl-color-gray-2);
+    font-style: italic;
+  }
+  .cs-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  @media (max-width: 768px) {
+    .cs-body { grid-template-columns: 1fr; }
+    .cs-col--traits {
+      border-right: none !important;
+      border-bottom: 1px solid var(--sl-color-gray-3);
+    }
+  }
+  .cs-col { padding: 1rem 1.25rem; }
+  .cs-col--traits { border-right: 1px solid var(--sl-color-gray-3); }
+  .cs-traits__item { margin-bottom: 0.6rem; }
+  .cs-traits__item:last-child { margin-bottom: 0; }
+  .cs-traits__label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--sl-color-accent);
+    margin-bottom: 0.1rem;
+  }
+  .cs-traits__text {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--sl-color-gray-8);
+  }
+  .cs-personality { margin-top: 0.4rem; }
+  .cs-personality__bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+  }
+  .cs-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .cs-bar__label {
+    font-size: 0.7rem;
+    color: var(--sl-color-gray-6);
+    white-space: nowrap;
+    width: 6rem;
+    flex-shrink: 0;
+    color: var(--sl-color-gray-2);
+  }
+  .cs-bar__label--low { text-align: right; }
+  .cs-bar__label--high { text-align: left; }
+  .cs-bar__track {
+    flex: 1;
+    height: 0.5rem;
+    background: var(--sl-color-gray-6);
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 4rem;
+  }
+  .cs-bar__fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--sl-color-accent), var(--sl-color-accent-high));
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+  .cs-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--sl-color-gray-3);
+  }
+  @media (max-width: 768px) {
+    .cs-row { flex-direction: column; gap: 1rem; }
+  }
+  .cs-row__section { flex: 1; margin: 0; padding: 0; }
+  .cs-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .cs-list li { margin-bottom: 0.1rem; }
+  .cs-list--strong li::marker { color: var(--sl-color-accent); }
+  .cs-list--weak li::marker { color: var(--sl-color-accent-high); }
+</style>

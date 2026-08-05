@@ -1,20 +1,23 @@
 ---
 title: Day 39 - The Blood Cathedral
+editUrl: false
 publish: true
+date: 2025-06-08
+location: Yuan-ti Lair / Blood Cathedral / Chult depths
+campaign_day: 39
+description: Deep in the yuan-ti lair, the group faces a colossal serpent,
+  nightmare incense, and an epic battle in a blood-soaked underground cathedral.
 tags:
   - diary
   - character/sombravelo
   - campaign/tomb-of-annihilation
-description: Deep in the yuan-ti lair, the group faces a colossal serpent, nightmare incense, and an epic battle in a blood-soaked underground cathedral.
-date: 2025-06-08
-location: Yuan-ti Lair / Blood Cathedral / Chult depths
-campaign_day: 39
 ---
 
 # Day 39 - The Blood Cathedral
 
-> [!note]
-> El grupo se enfrenta a una serpiente colosal, descubre incienso de pesadillas, engaña a los guardias yuanti y asalta una catedral de sangre llena de guerreros serpiente. Un mago yuanti bífido casi los aniquila, pero el doble crítico de Sombravelo y los cuernos de Pisoni cambian el rumbo. Bruska se queda atrás para liberar a los esclavos.
+:::note
+El grupo se enfrenta a una serpiente colosal, descubre incienso de pesadillas, engaña a los guardias yuanti y asalta una catedral de sangre llena de guerreros serpiente. Un mago yuanti bífido casi los aniquila, pero el doble crítico de Sombravelo y los cuernos de Pisoni cambian el rumbo. Bruska se queda atrás para liberar a los esclavos.
+:::
 
 ## Cronica
 
@@ -108,35 +111,35 @@ La noche en Chult había terminado, pero su eco resonaría para siempre en las l
 
 ## Encuentros
 
-- **Serpiente gigante:** Kradoc lanzó su martillo al otro lado de la sala. Sombravelo la mató estilo Solo Leveling — acrobacia con daga recorriéndola de cabo a rabo.
-- **Incienso de pesadillas:** Powder encendió un bloque, quedó atrapada en visiones de terror. Kairi la curó.
-- **Engaño yuanti:** Sombravelo convenció al jefe yuanti de que el ruido fue una rebelión de esclavos. "Se lo traga, qué tío tan tonto… Nah, es que soy buenísimo."
-- **Catedral de Sangre — Oleada 1 (11 guerreros yuanti + concubinas):** El veneno de éter de Sombravelo falló contra el guardia del gong. Alarma activada. Combate total.
-- **Catedral de Sangre — Oleada 2 (11 yuanti más con cimitarras):** Atraídos por el gong. Bastante torpes (el máster falló todas las tiradas).
-- **Catedral de Sangre — Boss (mago yuanti bífido):** Gritó "¡No, Nima!" al ver a su mujer en los cuernos de Pisoni. Tumbó a Kradoc, Bruska, Kai y Powder. Sombravelo sacó doble crítico (20/20 natural). Pisoni empaló al boss en su segundo cuerno junto a Nima.
-- **Huida + trampa de incienso:** Sombravelo montó trampa con incienso de pesadillas, cuerda y canicas. Los perseguidores cayeron de lleno.
+* **Serpiente gigante:** Kradoc lanzó su martillo al otro lado de la sala. Sombravelo la mató estilo Solo Leveling — acrobacia con daga recorriéndola de cabo a rabo.
+* **Incienso de pesadillas:** Powder encendió un bloque, quedó atrapada en visiones de terror. Kairi la curó.
+* **Engaño yuanti:** Sombravelo convenció al jefe yuanti de que el ruido fue una rebelión de esclavos. "Se lo traga, qué tío tan tonto… Nah, es que soy buenísimo."
+* **Catedral de Sangre — Oleada 1 (11 guerreros yuanti + concubinas):** El veneno de éter de Sombravelo falló contra el guardia del gong. Alarma activada. Combate total.
+* **Catedral de Sangre — Oleada 2 (11 yuanti más con cimitarras):** Atraídos por el gong. Bastante torpes (el máster falló todas las tiradas).
+* **Catedral de Sangre — Boss (mago yuanti bífido):** Gritó "¡No, Nima!" al ver a su mujer en los cuernos de Pisoni. Tumbó a Kradoc, Bruska, Kai y Powder. Sombravelo sacó doble crítico (20/20 natural). Pisoni empaló al boss en su segundo cuerno junto a Nima.
+* **Huida + trampa de incienso:** Sombravelo montó trampa con incienso de pesadillas, cuerda y canicas. Los perseguidores cayeron de lleno.
 
 ## Personajes
 
-| Personaje | Momento destacado |
-|-----------|-----------|
-| **Sombravelo** | Kill estilo Solo Leveling a la serpiente, engaño dorado al yuanti, doble crítico al boss, trampa de incienso para la huida |
-| **Kai** | Levitó a Kradoc inconsciente sobre la piscina de sangre, lo revivió con poción, sobrevivió con 1 PV, colleja psíquica al boss |
-| **Kairi** | Curó a Powder de las visiones de pesadilla, kills con Peaje de Muertos, cabalgó a Pisoni durante la huida |
-| **Kradoc** | Lanzó su martillo a tomar por culo, machacó yuanti con maza, primero en caer ante el boss |
-| **Powder** | Encendió incienso de pesadillas (mala idea), carnicería con lanzallamas, cono de pinchos de Espinas |
-| **Bruska** | Primera kill en la catedral, cayó múltiples veces, se quedó atrás para liberar a los esclavos |
-| **Pisoni** | Llegó al oír el gong, empaló yuanti en sus cuernos, mató al boss y lo reunió con Nima en la muerte |
+| Personaje      | Momento destacado                                                                                                             |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **Sombravelo** | Kill estilo Solo Leveling a la serpiente, engaño dorado al yuanti, doble crítico al boss, trampa de incienso para la huida    |
+| **Kai**        | Levitó a Kradoc inconsciente sobre la piscina de sangre, lo revivió con poción, sobrevivió con 1 PV, colleja psíquica al boss |
+| **Kairi**      | Curó a Powder de las visiones de pesadilla, kills con Peaje de Muertos, cabalgó a Pisoni durante la huida                     |
+| **Kradoc**     | Lanzó su martillo a tomar por culo, machacó yuanti con maza, primero en caer ante el boss                                     |
+| **Powder**     | Encendió incienso de pesadillas (mala idea), carnicería con lanzallamas, cono de pinchos de Espinas                           |
+| **Bruska**     | Primera kill en la catedral, cayó múltiples veces, se quedó atrás para liberar a los esclavos                                 |
+| **Pisoni**     | Llegó al oír el gong, empaló yuanti en sus cuernos, mató al boss y lo reunió con Nima en la muerte                            |
 
 ## Botin y recompensas
 
-- Bloques de incienso de pesadillas (reutilizados como material de trampa)
+* Bloques de incienso de pesadillas (reutilizados como material de trampa)
 
 ## Presagios y pistas
 
-- **El destino de Bruska** — se quedó sola para liberar esclavos en la guarida yuanti. ¿Sobrevivirá?
-- **La piscina de sangre** — los cuerpos se disolvieron pero no pasó nada. ¿Cuál es su verdadero propósito?
-- **Guarida yuanti** — escaparon pero la alarma sonó. Los yuanti saben que hubo intrusos.
+* **El destino de Bruska** — se quedó sola para liberar esclavos en la guarida yuanti. ¿Sobrevivirá?
+* **La piscina de sangre** — los cuerpos se disolvieron pero no pasó nada. ¿Cuál es su verdadero propósito?
+* **Guarida yuanti** — escaparon pero la alarma sonó. Los yuanti saben que hubo intrusos.
 
 ## Notas
 

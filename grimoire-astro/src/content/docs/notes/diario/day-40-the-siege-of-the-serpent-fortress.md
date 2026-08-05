@@ -1,20 +1,26 @@
 ---
 title: Day 40 - The Siege of the Serpent Fortress
+editUrl: false
 publish: true
+date: 2025-07-19
+location: Yuan-ti Fortress / Blood Cathedral / Chult
+campaign_day: 40
+description: The group launches a second assault on the yuan-ti fortress to
+  rescue Ruska and recover the tube of Bokamir. An epic 30-minute battle ensues
+  with waves of serpent warriors, Kai falls in combat and dies, Pisoni lands
+  miraculous critical hits, and Sombravelo surrenders before rejoining the
+  fight. The slaves turn the tide.
 tags:
   - diary
   - character/sombravelo
   - campaign/tomb-of-annihilation
-description: The group launches a second assault on the yuan-ti fortress to rescue Ruska and recover the tube of Bokamir. An epic 30-minute battle ensues with waves of serpent warriors, Kai falls in combat and dies, Pisoni lands miraculous critical hits, and Sombravelo surrenders before rejoining the fight. The slaves turn the tide.
-date: 2025-07-19
-location: Yuan-ti Fortress / Blood Cathedral / Chult
-campaign_day: 40
 ---
 
 # Day 40 - The Siege of the Serpent Fortress
 
-> [!note]
-> El grupo asalta de nuevo la fortaleza yuanti para encontrar a Ruska y recuperar el cubo de I'Jink. Tres hombres serpiente les cierran el paso pero Pisoni derriba la puerta. Una batalla caótica se desata con oleadas de guerreros serpiente y el maldito gong. Kai muere en combate. Pisoni resucita milagrosamente y saca críticos épicos. Sombravelo se rinde, fuma un piti, y luego vuelve a la pelea. Los esclavos liderados por Ruska dan la vuelta a la batalla. 30 minutos de combate puro.
+:::note
+El grupo asalta de nuevo la fortaleza yuanti para encontrar a Ruska y recuperar el cubo de I'Jink. Tres hombres serpiente les cierran el paso pero Pisoni derriba la puerta. Una batalla caótica se desata con oleadas de guerreros serpiente y el maldito gong. Kai muere en combate. Pisoni resucita milagrosamente y saca críticos épicos. Sombravelo se rinde, fuma un piti, y luego vuelve a la pelea. Los esclavos liderados por Ruska dan la vuelta a la batalla. 30 minutos de combate puro.
+:::
 
 ## Cronica
 
@@ -98,36 +104,36 @@ Habían reunido cinco cubos: **Obolaká**, **Papazote**, **Wongo**, **I'Jink** y
 
 ## Encuentros
 
-- **3 hombres serpiente (entrada):** Kai lanzó peaje de muertos desde Pisoni, Powder voló una cabeza con pistola de rayos. 2 se transformaron en serpientes y huyeron.
-- **7 guerreros yuanti (oleada del gong):** Atraídos por el gong. Kai se lanzó sola contra ellos y cayó. Curación en masa de Kairi.
-- **Pasillo bloqueado:** Sombravelo lanzó incienso de pesadillas, Powder lanzó grasa, Kairi prendió fuego. 2 enemigos enloquecidos, 2 en llamas.
-- **12 bichos serpiente (retaguardia):** Oleada final. Kai murió. Pisoni cayó y resucitó milagrosamente. Ruska llegó con esclavos.
-- **Boss yuanti:** Pidió rendirse. Pisoni lo empaló. SIIUUU.
+* **3 hombres serpiente (entrada):** Kai lanzó peaje de muertos desde Pisoni, Powder voló una cabeza con pistola de rayos. 2 se transformaron en serpientes y huyeron.
+* **7 guerreros yuanti (oleada del gong):** Atraídos por el gong. Kai se lanzó sola contra ellos y cayó. Curación en masa de Kairi.
+* **Pasillo bloqueado:** Sombravelo lanzó incienso de pesadillas, Powder lanzó grasa, Kairi prendió fuego. 2 enemigos enloquecidos, 2 en llamas.
+* **12 bichos serpiente (retaguardia):** Oleada final. Kai murió. Pisoni cayó y resucitó milagrosamente. Ruska llegó con esclavos.
+* **Boss yuanti:** Pidió rendirse. Pisoni lo empaló. SIIUUU.
 
 ## Personajes
 
-| Personaje | Momento destacado |
-|-----------|-----------|
-| **Kai** | Acrobacia sobre Pisoni + peaje de muertos, cargó sola contra 7 guerreros, cayó dos veces, murió en la oleada final |
-| **Pisoni** | Derribó la puerta de piedra, cayó y resucitó con nat 20 de Kairi, doble crítico post-resurrección, empaló al boss final |
-| **Kairi** | Curación en masa, prendió fuego con Powder, resucitó a Pisoni con nat 20 susurrando a los dados como bruja gitana |
+| Personaje      | Momento destacado                                                                                                                                           |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Kai**        | Acrobacia sobre Pisoni + peaje de muertos, cargó sola contra 7 guerreros, cayó dos veces, murió en la oleada final                                          |
+| **Pisoni**     | Derribó la puerta de piedra, cayó y resucitó con nat 20 de Kairi, doble crítico post-resurrección, empaló al boss final                                     |
+| **Kairi**      | Curación en masa, prendió fuego con Powder, resucitó a Pisoni con nat 20 susurrando a los dados como bruja gitana                                           |
 | **Sombravelo** | Incienso de pesadillas en el pasillo, se rindió y fumó un piti, lagrimilla disimulada al ver a Kairi y Pisoni, invocó lobo espectral para volver a la lucha |
-| **Kradoc** | Martillazo a los hombres serpiente, ayudó a abrir la puerta de piedra |
-| **Powder** | Pistola de rayos voló cabeza, lanzó grasa para combo de fuego con Kairi |
-| **Ruska** | Llegó con esclavos liberados en el momento crítico, cayó en batalla también |
+| **Kradoc**     | Martillazo a los hombres serpiente, ayudó a abrir la puerta de piedra                                                                                       |
+| **Powder**     | Pistola de rayos voló cabeza, lanzó grasa para combo de fuego con Kairi                                                                                     |
+| **Ruska**      | Llegó con esclavos liberados en el momento crítico, cayó en batalla también                                                                                 |
 
 ## Botin y recompensas
 
-- 5 cubos reunidos: Obolaká, Papazote, Wongo, I'Jinka, Nang Nang
-- Tubo de Bokamir (recuperado — objetivo de la misión)
-- Fortaleza yuanti conquistada
+* 5 cubos reunidos: Obolaká, Papazote, Wongo, I'Jinka, Nang Nang
+* Tubo de Bokamir (recuperado — objetivo de la misión)
+* Fortaleza yuanti conquistada
 
 ## Presagios y pistas
 
-- **Kai ha muerto** — la guerrera machota cayó luchando como vivió. ¿Se puede resucitar?
-- **5 cubos reunidos** — ¿Para qué sirven exactamente?
-- **Los esclavos liberados** — ahora son aliados. ¿Qué harán?
-- **Ruska** — volvió con los esclavos pero cayó en batalla. ¿Sobrevivió?
+* **Kai ha muerto** — la guerrera machota cayó luchando como vivió. ¿Se puede resucitar?
+* **5 cubos reunidos** — ¿Para qué sirven exactamente?
+* **Los esclavos liberados** — ahora son aliados. ¿Qué harán?
+* **Ruska** — volvió con los esclavos pero cayó en batalla. ¿Sobrevivió?
 
 ## Notas
 

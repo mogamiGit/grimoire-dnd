@@ -1,20 +1,25 @@
 ---
 title: Day 43 - Powder's Farewell and the Stranger from the Future
+editUrl: false
 publish: true
+date: 2026-04-01
+location: Tomb of the Nine Gods / Level 2-3
+campaign_day: 43
+description: The group mourns Powder at her resting place, battles eye-tentacles
+  and purple mold, and encounters a mysterious orc named Indirak Tonks who
+  claims to come from the future. They defeat Mustio, the tomb's undead
+  guardian, and claim powerful loot.
 tags:
   - diary
   - character/sombravelo
   - campaign/tomb-of-annihilation
-description: The group mourns Powder at her resting place, battles eye-tentacles and purple mold, and encounters a mysterious orc named Indirak Tonks who claims to come from the future. They defeat Mustio, the tomb's undead guardian, and claim powerful loot.
-date: 2026-04-01
-location: Tomb of the Nine Gods / Level 2-3
-campaign_day: 43
 ---
 
 # Day 43 - Powder's Farewell and the Stranger from the Future
 
-> [!note]
-> Kairi y Maedre rinden homenaje al cadáver de Powder, recuperando su calavera, un libro y cartas personales. Tras enfrentarse a moho morado con ojos y trampas de baldosas, un misterioso orco llamado Indirak Tonks aparece desde la sala donde murió Powder, afirmando venir del futuro. El grupo derrota a Mustio, el guardián no muerto de la tumba, y obtiene valiosos objetos mágicos.
+:::note
+Kairi y Maedre rinden homenaje al cadáver de Powder, recuperando su calavera, un libro y cartas personales. Tras enfrentarse a moho morado con ojos y trampas de baldosas, un misterioso orco llamado Indirak Tonks aparece desde la sala donde murió Powder, afirmando venir del futuro. El grupo derrota a Mustio, el guardián no muerto de la tumba, y obtiene valiosos objetos mágicos.
+:::
 
 ## Cronica
 
@@ -90,39 +95,39 @@ La sesión terminó con el grupo contemplando a la criatura, sopesando si exist�
 
 ## Encuentros
 
-- **Moho morado con ojos:** Karlach intentó golpearlo sin éxito. Kairi lo quemó. Un tentáculo con ojo contraatacó lanzando un proyectil a Karlach.
-- **Trampa de baldosas:** Kairi y Maedre la superaron juntas en la sala circular con botones.
-- **Mustio, guardián de la tumba:** No muerto, mago, esbirro de Acederak. Rodeado de manos amputadas. Karlach lo espachurró.
-- **Bicho indestructible (sala de sal):** Literalmente indestructible. Sin resolver.
+* **Moho morado con ojos:** Karlach intentó golpearlo sin éxito. Kairi lo quemó. Un tentáculo con ojo contraatacó lanzando un proyectil a Karlach.
+* **Trampa de baldosas:** Kairi y Maedre la superaron juntas en la sala circular con botones.
+* **Mustio, guardián de la tumba:** No muerto, mago, esbirro de Acederak. Rodeado de manos amputadas. Karlach lo espachurró.
+* **Bicho indestructible (sala de sal):** Literalmente indestructible. Sin resolver.
 
 ## Personajes
 
-| Personaje | Momento destacado |
-|-----------|-----------|
-| **Kairi** | Se abrazó a la calavera de Powder, quemó el moho morado con ojos, recuperó el libro de conjuros de Powder/Mustio |
-| **Maedre** | Se quedó con una falange de Powder, encontró espada mágica y ojo en la trampa, se quedó el manual de golems de arcilla |
-| **Karlach** | Intentó machacar moho morado (falló), recibió proyectil del tentáculo, espachurró a Mustio |
-| **Indirak Tonks** | Apareció misteriosamente desde la sala de Powder, afirma venir del futuro, cogió amuleto de teleport de calavera |
+| Personaje         | Momento destacado                                                                                                      |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Kairi**         | Se abrazó a la calavera de Powder, quemó el moho morado con ojos, recuperó el libro de conjuros de Powder/Mustio       |
+| **Maedre**        | Se quedó con una falange de Powder, encontró espada mágica y ojo en la trampa, se quedó el manual de golems de arcilla |
+| **Karlach**       | Intentó machacar moho morado (falló), recibió proyectil del tentáculo, espachurró a Mustio                             |
+| **Indirak Tonks** | Apareció misteriosamente desde la sala de Powder, afirma venir del futuro, cogió amuleto de teleport de calavera       |
 
 ## Botin y recompensas
 
-- Calavera de Powder (guardada por Kairi)
-- Falange de Powder (guardada por Maedre)
-- Libro y cartas personales de Powder para el grupo
-- Arma mágica +1 (1D8 perforante, invocable como arma del desierto) — de la caja roja
-- Espada mágica + ojo (encontrados por Maedre junto al cadáver con cuernos)
-- Libro de conjuros *"Khamora Fuego Negro"* (Kairi) — originalmente de Powder
-- Manual de golems de arcilla (Maedre)
-- Amuleto de teleport de calavera (Indirak)
-- Material para paquete de erudito (del escritorio de Mustio)
+* Calavera de Powder (guardada por Kairi)
+* Falange de Powder (guardada por Maedre)
+* Libro y cartas personales de Powder para el grupo
+* Arma mágica +1 (1D8 perforante, invocable como arma del desierto) — de la caja roja
+* Espada mágica + ojo (encontrados por Maedre junto al cadáver con cuernos)
+* Libro de conjuros *"Khamora Fuego Negro"* (Kairi) — originalmente de Powder
+* Manual de golems de arcilla (Maedre)
+* Amuleto de teleport de calavera (Indirak)
+* Material para paquete de erudito (del escritorio de Mustio)
 
 ## Presagios y pistas
 
-- **Indirak Tonks viene del futuro** — un orco que aparece de la nada afirmando venir de un año en el futuro. ¿Cómo llegó? ¿Qué sabe del destino del grupo?
-- **El bicho indestructible de la sala de sal** — nada lo daña. ¿Hay alguna forma de superarlo o hay que evitarlo?
-- **Mustio, esbirro de Acederak** — el guardián que recolocaba las trampas está muerto. ¿Notará Acederak su ausencia?
-- **Las cartas de Powder** — ¿qué decían? Su contenido podría afectar emocionalmente al grupo.
-- **El tentáculo con ojo** — sigue vivo en el pasillo. Podría ser un problema si el grupo necesita volver.
+* **Indirak Tonks viene del futuro** — un orco que aparece de la nada afirmando venir de un año en el futuro. ¿Cómo llegó? ¿Qué sabe del destino del grupo?
+* **El bicho indestructible de la sala de sal** — nada lo daña. ¿Hay alguna forma de superarlo o hay que evitarlo?
+* **Mustio, esbirro de Acederak** — el guardián que recolocaba las trampas está muerto. ¿Notará Acederak su ausencia?
+* **Las cartas de Powder** — ¿qué decían? Su contenido podría afectar emocionalmente al grupo.
+* **El tentáculo con ojo** — sigue vivo en el pasillo. Podría ser un problema si el grupo necesita volver.
 
 ## Notas
 

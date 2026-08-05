@@ -1,0 +1,50 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import CharacterSheet from './CharacterSheet.astro';
+import CharacterCards from './CharacterCards.astro';
+import Backlinks from './Backlinks.astro';
+
+let slug = '';
+let frontmatter: Record<string, unknown> = {};
+let tags: string[] = [];
+
+try {
+  const route = Astro.locals.starlightRoute;
+  slug = route.id;
+  frontmatter = route.entry.data as Record<string, unknown>;
+  tags = (frontmatter.tags as string[]) ?? [];
+} catch {
+  // starlightRoute not available
+}
+
+const isCharacterPage =
+  slug.includes('wiki/personajes/') &&
+  !slug.endsWith('wiki/personajes') &&
+  !slug.endsWith('personajes/index') &&
+  tags.includes('personaje/jugador');
+
+const isPersonajesIndex =
+  slug.endsWith('wiki/personajes') ||
+  slug.endsWith('wiki/personajes/index');
+---
+
+<Default {...Astro.props}>
+  {isCharacterPage && (
+    <CharacterSheet
+      clase={frontmatter.clase as string}
+      raza={frontmatter.raza as string}
+      estado={frontmatter.estado as string}
+      alineamiento={frontmatter.alineamiento as string}
+      personalidad={frontmatter.personalidad as Record<string, number | null | undefined> | undefined}
+      origen={frontmatter.origen as string}
+      ideales={frontmatter.ideales as string}
+      lazos={frontmatter.lazos as string}
+      defectos={frontmatter.defectos as string}
+      puntos_fuertes={frontmatter.puntos_fuertes as string[]}
+      puntos_debiles={frontmatter.puntos_debiles as string[]}
+    />
+  )}
+  {isPersonajesIndex && <CharacterCards />}
+  <slot />
+  <Backlinks currentId={slug} />
+</Default>
