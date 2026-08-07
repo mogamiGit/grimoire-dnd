@@ -3,6 +3,8 @@ import Default from '@astrojs/starlight/components/MarkdownContent.astro';
 import CharacterSheet from './CharacterSheet.astro';
 import CharacterCards from './CharacterCards.astro';
 import Backlinks from './Backlinks.astro';
+import TagList from './TagList.astro';
+import TagLinker from './TagLinker.astro';
 
 let slug = '';
 let frontmatter: Record<string, unknown> = {};
@@ -49,5 +51,7 @@ const isPersonajesIndex =
   }
   {isPersonajesIndex && <CharacterCards />}
   <slot />
+  <TagLinker />
+  <TagList tags={tags} />
   <Backlinks currentId={slug} />
 </Default>

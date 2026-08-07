@@ -1,0 +1,50 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getTagMap, groupTagsByCategory } from '../../utils/tags';
+
+const tagMap = await getTagMap();
+const allTags = [...tagMap.keys()].sort((a, b) => a.localeCompare(b, 'es'));
+const grouped = groupTagsByCategory(allTags);
+
+const categoryLabels: Record<string, string> = {
+  _uncategorized: 'General',
+  campaign: 'Campaña',
+  character: 'Personajes (mencionados)',
+  diary: 'Diario',
+  faction: 'Facciones',
+  location: 'Lugares',
+  personaje: 'Personajes (ficha)',
+  npc: 'NPCs',
+  item: 'Objetos',
+};
+---
+
+<StarlightPage
+  frontmatter={{ title: 'Etiquetas', description: 'Todas las etiquetas del grimorio' }}
+>
+  <p>Todas las etiquetas usadas en el grimorio, agrupadas por categoría.</p>
+
+  {
+    [...grouped.entries()].map(([category, tags]) => (
+      <section class="mb-8">
+        <h2>{categoryLabels[category] ?? category}</h2>
+        <div class="flex flex-wrap gap-2">
+          {tags.map((tag) => {
+            const count = tagMap.get(tag)?.length ?? 0;
+            return (
+              <a
+                href={`/tags/${tag}/`}
+                class="group inline-flex items-center gap-[0.4rem] px-3 py-[0.35rem] border border-[var(--sl-color-accent)] rounded-2xl bg-[var(--sl-color-gray-7)] text-[var(--sl-color-gray-1)] no-underline text-[0.9rem] transition-all duration-150 hover:bg-[var(--sl-color-accent)] hover:text-[var(--sl-color-gray-7)]"
+              >
+                <span>{tag}</span>
+                <span class="text-xs px-[0.4rem] py-[0.1rem] rounded-xl bg-[var(--sl-color-gray-6)] text-[var(--sl-color-gray-2)] group-hover:bg-[var(--sl-color-accent-high)] group-hover:text-[var(--sl-color-gray-1)]">
+                  {count}
+                </span>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    ))
+  }
+</StarlightPage>
