@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;500&display=swap');
+
+@layer base, starlight, theme, components, utilities;
+
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+  --font-sans: 'Crimson Text', Georgia, serif;
+  --font-mono: 'Fira Code', ui-monospace, monospace;
+  --font-heading: 'Cinzel', 'Palatino Linotype', serif;
+}
+
+/* Starlight theme — light mode (base) */
+:root {
+  --sl-font-headings: var(--font-heading);
+  --sl-color-accent-low: #2a2210;
+  --sl-color-accent: #c9a84c;
+  --sl-color-accent-high: #f0e0b0;
+  --sl-color-text-accent: #c9a84c;
+  --sl-color-gray-1: #1a1510;
+  --sl-color-gray-2: #2a2218;
+  --sl-color-gray-3: #3a3028;
+  --sl-color-gray-4: #6b5d4f;
+  --sl-color-gray-5: #8c7a5e;
+  --sl-color-gray-6: #d4c9b0;
+  --sl-color-gray-7: #f5f0e6;
+}
+
+/* Starlight theme — dark mode */
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #3a1010;
+  --sl-color-accent: #ff9641;
+  --sl-color-accent-high: #d4a0a0;
+  --sl-color-text-accent: #ed5c28;
+  --sl-color-gray-1: #f5f0e6;
+  --sl-color-gray-2: #e8e0d0;
+  --sl-color-gray-3: #d4c9b0;
+  --sl-color-gray-4: #8c7a5e;
+  --sl-color-gray-5: #6b5d4f;
+  --sl-color-gray-6: #4a3728;
+  --sl-color-gray-7: #2c1810;
+}
+
+/* Heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4 {
+  font-family: var(--font-heading);
+  color: var(--sl-color-gray-4);
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+nav a[aria-current='page'] {
+  font-weight: 600;
+}
+
+.starlight-aside {
+  border-radius: 0.25rem;
+}
+
+/* Hide duplicate H1 (Starlight already renders frontmatter title) */
+.sl-markdown-content .sl-heading-wrapper.level-h1:first-child {
+  display: none;
+}
+
+:root .sl-obs-tag {
+  background-color: var(--sl-color-gray-7);
+  border-color: var(--sl-color-accent);
+  color: var(--sl-color-gray-1);
+}

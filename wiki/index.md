@@ -5,6 +5,8 @@ description: "Enciclopedia del mundo de campana"
 tags:
   - wiki
 date: 2024-11-02
+sidebar:
+  hidden: true
 ---
 
 # Wiki

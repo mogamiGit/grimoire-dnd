@@ -24,26 +24,29 @@ const isCharacterPage =
   tags.includes('personaje/jugador');
 
 const isPersonajesIndex =
-  slug.endsWith('wiki/personajes') ||
-  slug.endsWith('wiki/personajes/index');
+  slug.endsWith('wiki/personajes') || slug.endsWith('wiki/personajes/index');
 ---
 
 <Default {...Astro.props}>
-  {isCharacterPage && (
-    <CharacterSheet
-      clase={frontmatter.clase as string}
-      raza={frontmatter.raza as string}
-      estado={frontmatter.estado as string}
-      alineamiento={frontmatter.alineamiento as string}
-      personalidad={frontmatter.personalidad as Record<string, number | null | undefined> | undefined}
-      origen={frontmatter.origen as string}
-      ideales={frontmatter.ideales as string}
-      lazos={frontmatter.lazos as string}
-      defectos={frontmatter.defectos as string}
-      puntos_fuertes={frontmatter.puntos_fuertes as string[]}
-      puntos_debiles={frontmatter.puntos_debiles as string[]}
-    />
-  )}
+  {
+    isCharacterPage && (
+      <CharacterSheet
+        clase={frontmatter.clase as string}
+        raza={frontmatter.raza as string}
+        estado={frontmatter.estado as string}
+        alineamiento={frontmatter.alineamiento as string}
+        personalidad={
+          frontmatter.personalidad as Record<string, number | null | undefined> | undefined
+        }
+        origen={frontmatter.origen as string}
+        ideales={frontmatter.ideales as string}
+        lazos={frontmatter.lazos as string}
+        defectos={frontmatter.defectos as string}
+        puntos_fuertes={frontmatter.puntos_fuertes as string[]}
+        puntos_debiles={frontmatter.puntos_debiles as string[]}
+      />
+    )
+  }
   {isPersonajesIndex && <CharacterCards />}
   <slot />
   <Backlinks currentId={slug} />
