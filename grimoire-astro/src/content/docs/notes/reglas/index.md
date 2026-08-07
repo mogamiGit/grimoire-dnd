@@ -3,6 +3,8 @@ title: Reglas
 editUrl: false
 publish: true
 date: 2024-11-02
+sidebar:
+  hidden: true
 description: Referencia rapida de reglas D&D 5e
 tags:
   - reglas

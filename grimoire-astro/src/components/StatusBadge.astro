@@ -10,28 +10,25 @@ const STATUS_LABELS: Record<string, string> = {
   desaparecido: '👁 Desaparecido',
 };
 
+const STATUS_COLORS: Record<string, string> = {
+  vivo: 'bg-[#2d6a2e] text-[#e8f5e9]',
+  muerto: 'bg-[#8b2020] text-[#fce4ec]',
+  desaparecido: 'bg-[#b8860b] text-[#fff8e1]',
+  otro: 'bg-[var(--sl-color-gray-4)] text-[var(--sl-color-gray-1)]',
+};
+
 const { estado, fallback } = Astro.props;
 const status = estado || fallback;
 const label = status ? (STATUS_LABELS[status] ?? status) : null;
-const cssClass = status && STATUS_LABELS[status] ? status : 'otro';
+const colorClass = status && STATUS_LABELS[status] ? STATUS_COLORS[status] : STATUS_COLORS.otro;
 ---
 
-{label && <span class={`status-badge status-badge--${cssClass}`}>{label}</span>}
-
-<style>
-  .status-badge {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .status-badge--vivo { background: #2d6a2e; color: #e8f5e9; }
-  .status-badge--muerto { background: #8b2020; color: #fce4ec; }
-  .status-badge--desaparecido { background: #b8860b; color: #fff8e1; }
-  .status-badge--otro { background: var(--sl-color-gray-4); color: var(--sl-color-gray-1); }
-</style>
+{
+  label && (
+    <span
+      class={`inline-block px-3 py-1.5 rounded-full text-[0.7rem] font-bold uppercase tracking-[0.04em] whitespace-nowrap shrink-0 ${colorClass}`}
+    >
+      {label}
+    </span>
+  )
+}

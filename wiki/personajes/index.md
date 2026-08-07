@@ -7,6 +7,8 @@ tags:
   - campaign/tomb-of-annihilation
 date: 2025-06-19
 description: "Galería de personajes jugadores de la campaña Tomb of Annihilation"
+sidebar:
+  hidden: true
 ---
 
 Los héroes (y antihéroes) que se aventuran en las tierras de Chult.

@@ -18,7 +18,11 @@ const mdLinkRegex = /\[(?:[^\]]*)\]\((?<url>[^)]+)\)/g;
 
 // Normalize path for comparison: strip /notes/ prefix, trailing slash, /index
 function normalizePath(p: string): string {
-  return p.replace(/^\/notes\//, '').replace(/^notes\//, '').replace(/\/index$/, '').replace(/\/$/, '');
+  return p
+    .replace(/^\/notes\//, '')
+    .replace(/^notes\//, '')
+    .replace(/\/index$/, '')
+    .replace(/\/$/, '');
 }
 
 const normalizedCurrent = normalizePath(currentId);
@@ -45,47 +49,24 @@ for (const doc of allDocs) {
 backlinks.sort((a, b) => a.title.localeCompare(b.title, 'es'));
 ---
 
-{backlinks.length > 0 && (
-  <div class="backlinks">
-    <h2 class="backlinks__title">Enlaces a esta página</h2>
-    <ul class="backlinks__list">
-      {backlinks.map((link) => (
-        <li>
-          <a href={link.href}>{link.title}</a>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
-
-<style>
-  .backlinks {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--sl-color-gray-3);
-  }
-  .backlinks__title {
-    margin: 0 0 0.75rem;
-    font-size: 1rem;
-    font-family: var(--sl-font-headings);
-    color: var(--sl-color-gray-5);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .backlinks__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .backlinks__list li {
-    margin-bottom: 0.25rem;
-  }
-  .backlinks__list a {
-    color: var(--sl-color-accent);
-    text-decoration: none;
-    font-size: 0.95rem;
-  }
-  .backlinks__list a:hover {
-    text-decoration: underline;
-  }
-</style>
+{
+  backlinks.length > 0 && (
+    <div class="mt-8 pt-6 border-t border-[var(--sl-color-gray-3)]">
+      <h2 class="m-0 mb-3 text-base font-heading text-[var(--sl-color-gray-5)] uppercase tracking-wider">
+        Enlaces a esta página
+      </h2>
+      <ul class="m-0 p-0 list-none">
+        {backlinks.map((link) => (
+          <li class="mb-1">
+            <a
+              href={link.href}
+              class="text-[var(--sl-color-accent)] no-underline text-[0.95rem] hover:underline"
+            >
+              {link.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
