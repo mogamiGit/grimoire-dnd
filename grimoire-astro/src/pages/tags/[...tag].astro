@@ -1,0 +1,51 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getTagMap } from '../../utils/tags';
+
+export async function getStaticPaths() {
+  const tagMap = await getTagMap();
+  return [...tagMap.entries()].map(([tag, docs]) => ({
+    params: { tag },
+    props: { tag, docs },
+  }));
+}
+
+const { tag, docs } = Astro.props;
+---
+
+<StarlightPage
+  frontmatter={{ title: `Etiqueta: ${tag}`, description: `Páginas con la etiqueta "${tag}"` }}
+>
+  <p>
+    {docs.length}
+    {docs.length === 1 ? 'página' : 'páginas'} con la etiqueta <strong>{tag}</strong>.
+  </p>
+
+  <ul class="list-none p-0">
+    {
+      docs.map((doc) => (
+        <li class="py-2 border-b border-[var(--sl-color-gray-6)] flex items-baseline gap-3 flex-wrap">
+          <a href={`/${doc.slug}/`} class="font-semibold">
+            {doc.title}
+          </a>
+          <span class="inline-flex gap-1 flex-wrap">
+            {doc.tags
+              .filter((t) => t !== tag)
+              .map((t) => (
+                <a
+                  href={`/tags/${t}/`}
+                  class="text-xs px-2 py-[0.1rem] rounded-2xl bg-[var(--sl-color-gray-7)] border border-[var(--sl-color-gray-5)] text-[var(--sl-color-gray-3)] no-underline transition-all duration-150 hover:border-[var(--sl-color-accent)] hover:text-[var(--sl-color-gray-1)]"
+                >
+                  {t}
+                </a>
+              ))}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <p class="mt-8">
+    <a href="/tags/">&larr; Todas las etiquetas</a>
+  </p>
+</StarlightPage>

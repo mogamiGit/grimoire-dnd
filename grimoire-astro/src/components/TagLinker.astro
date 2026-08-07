@@ -1,0 +1,18 @@
+---
+// Converts static <span class="sl-obs-tag"> elements (rendered by starlight-obsidian)
+// into clickable <a> links pointing to /tags/<tagName>/
+---
+
+<script>
+  document.querySelectorAll<HTMLSpanElement>('span.sl-obs-tag').forEach((span) => {
+    const text = span.textContent?.trim();
+    if (!text) return;
+    // starlight-obsidian prepends # to tag text — strip it for URL
+    const tag = text.startsWith('#') ? text.slice(1) : text;
+    const link = document.createElement('a');
+    link.href = `/tags/${tag}/`;
+    link.className = span.className;
+    link.textContent = span.textContent;
+    span.replaceWith(link);
+  });
+</script>

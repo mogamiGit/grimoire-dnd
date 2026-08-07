@@ -46,6 +46,10 @@ export default defineConfig({
           label: 'Campaign',
           items: [obsidianSidebarEntries],
         },
+        {
+          label: 'Etiquetas',
+          link: '/tags/',
+        },
       ],
     }),
   ],
