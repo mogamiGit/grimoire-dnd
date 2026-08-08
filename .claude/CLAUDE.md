@@ -8,23 +8,27 @@
 
 ## What Is This
 
-Obsidian vault + Quartz v5 digital garden for a D&D 5e campaign ("Tomb of Annihilation").
-Published at **dnd.mogamihub.xyz** via GitHub Pages.
+Obsidian vault + Astro Starlight digital garden for a D&D 5e campaign ("Tomb of Annihilation").
+Published at **dnd.mogamihub.xyz** via Vercel.
 Primary language: **Spanish** (content). English (config/code).
 
 ## Stack
 
 - **Obsidian** — local vault editor
-- **Quartz v5.0.0** — static site generator (digital garden)
-- **Node.js ≥22**, npm ≥10.9.2, TypeScript 5.9
-- **GitHub Actions** — CI/CD (deploy, frontmatter validation, spell check, link check)
-- **GitHub Pages** — hosting
+- **Astro 7** — static site framework
+- **Starlight 0.41** — documentation theme for Astro
+- **starlight-obsidian 0.13** — Obsidian vault integration for Starlight
+- **Tailwind CSS v4** — styling (via `@tailwindcss/vite`)
+- **Node.js ≥22**, TypeScript
+- **Prettier** + **Husky** — code formatting with pre-commit hook (lint-staged)
+- **GitHub Actions** — CI/CD (deploy to Vercel, frontmatter validation, spell check, link check)
+- **Vercel** — hosting
 
 ## Directory Structure
 
 ```
 .
-├── index.md                  # Site entry point
+├── index.md                  # Site entry point (Obsidian)
 ├── diario/                   # Campaign session diaries (narrative logs)
 │   ├── index.md
 │   └── day-*.md / session-*.md
@@ -39,16 +43,22 @@ Primary language: **Spanish** (content). English (config/code).
 │   └── index.md
 ├── _templates/               # Obsidian templates (not published)
 │   ├── plantilla-diario.md   # Diary entry template
-│   └── plantilla-wiki.md    # Wiki entry template
+│   ├── plantilla-wiki.md     # Wiki entry template
+│   └── plantilla-personaje.md # Character entry template
 ├── _rules/                   # D&D 5e SRD markdown (git submodule, not published)
 ├── _docs/                    # Internal docs (not published)
-├── quartz/                   # Quartz framework (git submodule)
-├── .quartz/plugins/          # Custom Quartz plugins
+├── grimoire-astro/           # Astro Starlight project
+│   ├── astro.config.mjs      # Astro + Starlight + starlight-obsidian config
+│   ├── src/
+│   │   ├── content.config.ts  # Content schema (Zod — extended D&D fields)
+│   │   ├── components/        # Custom Astro components
+│   │   ├── pages/tags/        # Tag navigation pages
+│   │   └── styles/global.css  # Theme: fonts, colors, Starlight overrides
+│   ├── package.json
+│   └── package-lock.json
 ├── .github/workflows/        # CI: deploy, frontmatter-check, spellcheck, link-check
 ├── .obsidian/                # Obsidian vault config
-├── quartz.config.yaml        # Quartz site config (locale, theme, plugins)
-├── package.json              # Node dependencies
-└── public/                   # Generated static output (gitignored)
+└── .claude/                  # Claude Code project config
 ```
 
 ## Content Conventions
@@ -73,6 +83,31 @@ aliases: []            # optional (wiki)
 
 CI enforces: `title`, `publish`, `tags`, `date` present. `publish` must be boolean. `tags` should not be empty.
 
+### Character Frontmatter (additional fields)
+
+```yaml
+clase: ""              # D&D class
+raza: ""               # Race
+estado: "vivo"         # Status: vivo/muerto/desaparecido
+origen: ""             # Origin
+alineamiento: ""       # Alignment
+nickname: ""           # Optional nickname
+personalidad:          # Personality axes (numeric scales)
+  flexible_adoquin:
+  miedica_temerario:
+  desaborido_ladino:
+  discapacidades_avispado:
+  negado_acrobatico:
+  sensato_lunatico:
+ideales: ""
+lazos: ""
+defectos: ""
+puntos_fuertes: []
+puntos_debiles: []
+```
+
+These fields are validated in `grimoire-astro/src/content.config.ts` via Zod schema extending Starlight's `docsSchema`.
+
 ### Wikilinks
 
 Content uses Obsidian `[[wikilinks]]` syntax. CI validates all wikilinks resolve to existing files.
@@ -87,40 +122,58 @@ Commit messages and code comments in English.
 - **No body/description** — subject line only
 - **No Co-Authored-By** — never add co-author trailers
 
+## Custom Components
+
+Located in `grimoire-astro/src/components/`:
+
+| Component | Purpose |
+|---|---|
+| `MarkdownContent.astro` | Starlight override — wraps content with backlinks + tag linking |
+| `Backlinks.astro` | Displays backlinks (pages that link to current page) |
+| `TagLinker.astro` | Converts tag badges into clickable links |
+| `TagList.astro` | Tag index page component |
+| `CharacterSheet.astro` | D&D character sheet display (personality axes, stats) |
+| `CharacterCards.astro` | Character card grid for listings |
+| `StatusBadge.astro` | Character status indicator (vivo/muerto/desaparecido) |
+
 ## Key Files
 
 | File | Purpose |
 |---|---|
-| `quartz.config.yaml` | Site config: locale (es-ES), theme colors, fonts, plugins, ignored paths |
+| `grimoire-astro/astro.config.mjs` | Astro + Starlight config: locale, sidebar, plugins, Tailwind |
+| `grimoire-astro/src/content.config.ts` | Content schema: Zod validation for D&D fields |
+| `grimoire-astro/src/styles/global.css` | Theme: fonts (Cinzel, Crimson Text, Fira Code), Starlight color overrides |
 | `_templates/plantilla-diario.md` | Template for new diary entries |
 | `_templates/plantilla-wiki.md` | Template for new wiki entries |
-| `.github/workflows/deploy.yml` | Build Quartz + deploy to GitHub Pages |
+| `_templates/plantilla-personaje.md` | Template for new character entries |
+| `.github/workflows/deploy.yml` | Build Astro + deploy to Vercel |
 | `.github/workflows/frontmatter-check.yml` | Validate frontmatter on content files |
 | `.github/workflows/spellcheck.yml` | Spanish spell check with aspell |
 | `.github/workflows/link-check.yml` | Validate wikilink integrity |
 
-## Ignored by Quartz (not published)
+## Ignored by Starlight (not published)
 
-Paths in `quartz.config.yaml` ignorePatterns: `private`, `_templates`, `_rules`, `_docs`, `.obsidian`, `quartz`, `node_modules`.
+Paths in `astro.config.mjs` starlightObsidian ignore: `_templates`, `_rules`, `_docs`, `.obsidian`, `node_modules`, `.claude`, `.github`, `.vscode`, `grimoire-astro`.
 
 ## Theme
 
-D&D-themed design:
+D&D-themed design defined in `grimoire-astro/src/styles/global.css`:
 - Fonts: Cinzel (headers), Crimson Text (body), Fira Code (code)
-- Light: parchment background (#f5f0e6), dark red (#8b2020), gold (#b8860b)
-- Dark: dark brown (#1a1510), gold (#c9a84c), red (#8b2020)
+- Light mode: parchment background (#f5f0e6), gold accent (#c9a84c), dark grays
+- Dark mode: dark brown (#2c1810), orange-fire accent (#ff9641/#ed5c28), inverted grays
 
 ## Development Workflow
 
 1. Edit content in Obsidian (obsidian-git plugin for version control)
 2. Push to `main` branch
-3. GitHub Actions: validate frontmatter → spell check → link check → build Quartz → deploy
-4. Local dev: `npx quartz build --serve -d .`
+3. GitHub Actions: validate frontmatter → spell check → link check → build Astro → deploy to Vercel
+4. Local dev: `cd grimoire-astro && npm run dev`
 
 ## Important Notes
 
-- **Never edit files inside `quartz/`** — it's a git submodule
 - **Never edit files inside `_rules/`** — it's a git submodule
 - Content directories: `diario/`, `wiki/`, `reglas/` — these are the editable content areas
-- `public/` is generated output, do not edit manually
+- `grimoire-astro/dist/` is generated output, do not edit manually
 - Templates in `_templates/` define frontmatter structure for new content
+- Astro project lives in `grimoire-astro/` — all code/config changes happen there
+- Prettier formatting enforced on commit via Husky pre-commit hook
