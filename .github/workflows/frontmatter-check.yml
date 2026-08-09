@@ -6,12 +6,12 @@ on:
       - main
     paths:
       - 'diario/**'
-      - 'wiki/**'
+      - 'personajes/**'
       - 'reglas/**'
   pull_request:
     paths:
       - 'diario/**'
-      - 'wiki/**'
+      - 'personajes/**'
       - 'reglas/**'
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
         run: |
           exit_code=0
 
-          for file in $(find diario wiki reglas -name '*.md' 2>/dev/null); do
+          for file in $(find diario personajes reglas -name '*.md' 2>/dev/null); do
             # Check file has frontmatter delimiters
             if ! head -1 "$file" | grep -q '^---$'; then
               echo "::error file=$file::Missing frontmatter"

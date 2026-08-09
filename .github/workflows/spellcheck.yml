@@ -6,12 +6,12 @@ on:
       - main
     paths:
       - 'diario/**'
-      - 'wiki/**'
+      - 'personajes/**'
       - 'reglas/**'
   pull_request:
     paths:
       - 'diario/**'
-      - 'wiki/**'
+      - 'personajes/**'
       - 'reglas/**'
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
       - name: Run spell check
         run: |
           errors=0
-          for file in $(find diario wiki reglas -name '*.md' 2>/dev/null); do
+          for file in $(find diario personajes reglas -name '*.md' 2>/dev/null); do
             # Strip YAML frontmatter and markdown syntax, then check spelling
             result=$(sed '1{/^---$/,/^---$/d}' "$file" | \
               sed 's/\*\*//g; s/\*//g; s/\[\[.*\]\]//g; s/\[.*\](.*//g; s/#//g; s/`[^`]*`//g; s/|//g; s/---//g' | \
