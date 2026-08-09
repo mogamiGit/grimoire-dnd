@@ -6,6 +6,7 @@
 
 # Node
 node_modules/
+pnpm-lock.yaml
 
 # Astro build output
 grimoire-astro/dist/
