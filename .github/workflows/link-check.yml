@@ -6,13 +6,13 @@ on:
       - main
     paths:
       - 'diario/**'
-      - 'wiki/**'
+      - 'personajes/**'
       - 'reglas/**'
       - 'index.md'
   pull_request:
     paths:
       - 'diario/**'
-      - 'wiki/**'
+      - 'personajes/**'
       - 'reglas/**'
       - 'index.md'
 
@@ -27,7 +27,7 @@ jobs:
           exit_code=0
 
           # Collect all markdown files (excluding ignored dirs)
-          all_files=$(find diario wiki reglas -name '*.md' 2>/dev/null)
+          all_files=$(find diario personajes reglas -name '*.md' 2>/dev/null)
           # Also include root index.md
           if [ -f "index.md" ]; then
             all_files="$all_files index.md"

@@ -99,6 +99,19 @@ nav a[aria-current='page'] {
   border-radius: 0.25rem;
 }
 
+/* Fix: Restore Starlight column separators overridden by Tailwind v4 preflight layer ordering */
+@media (min-width: 50em) {
+  .sidebar-pane {
+    border-inline-end: 1px solid var(--sl-color-hairline-shade);
+  }
+}
+
+@media (min-width: 72rem) {
+  .right-sidebar {
+    border-inline-start: 1px solid var(--sl-color-hairline);
+  }
+}
+
 /* Hide duplicate H1 (Starlight already renders frontmatter title) */
 .sl-markdown-content .sl-heading-wrapper.level-h1:first-child {
   display: none;

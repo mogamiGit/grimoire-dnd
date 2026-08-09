@@ -12,6 +12,6 @@ Grimorio de campana de Dungeons & Dragons 5e.
 
 ## Secciones
 
-- [[wiki/index|Wiki]] - Enciclopedia del mundo
+- [[personajes/index|Personajes]] - Personajes jugadores
 - [[diario/index|Diario]] - Registro de sesiones
 - [[reglas/index|Reglas]] - Referencia rapida de reglas

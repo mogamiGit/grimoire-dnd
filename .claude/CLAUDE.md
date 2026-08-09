@@ -32,13 +32,9 @@ Primary language: **Spanish** (content). English (config/code).
 ├── diario/                   # Campaign session diaries (narrative logs)
 │   ├── index.md
 │   └── day-*.md / session-*.md
-├── wiki/                     # Campaign world encyclopedia
+├── personajes/               # Player characters
 │   ├── index.md
-│   ├── personajes/           # Characters
-│   ├── lugares/              # Locations
-│   ├── facciones/            # Factions
-│   ├── objetos/              # Items/Objects
-│   └── sesiones/             # Session cross-references
+│   └── *.md                  # Individual character sheets
 ├── reglas/                   # D&D 5e rules reference
 │   └── index.md
 ├── _templates/               # Obsidian templates (not published)
@@ -172,7 +168,7 @@ D&D-themed design defined in `grimoire-astro/src/styles/global.css`:
 ## Important Notes
 
 - **Never edit files inside `_rules/`** — it's a git submodule
-- Content directories: `diario/`, `wiki/`, `reglas/` — these are the editable content areas
+- Content directories: `diario/`, `personajes/`, `reglas/` — these are the editable content areas
 - `grimoire-astro/dist/` is generated output, do not edit manually
 - Templates in `_templates/` define frontmatter structure for new content
 - Astro project lives in `grimoire-astro/` — all code/config changes happen there
