@@ -73,26 +73,29 @@ const hasPersonality = hasPersonalidad(personalidad);
 const hasTraits = hasPersonality || origen || ideales || lazos || defectos;
 const hasStrengthsWeaknesses = hasContent(puntos_fuertes) || hasContent(puntos_debiles);
 const subtitleParts = [clase, raza].filter(Boolean);
-const show = hasTraits || hasStrengthsWeaknesses || alineamiento || clase || raza;
 
-const labelClass =
-  'block text-[0.7rem] font-bold uppercase tracking-wider text-[var(--sl-color-accent)] mb-0.5';
-const traitTextClass = 'm-0 text-[0.85rem] leading-relaxed';
+const TRAIT_FIELDS = [
+  { label: 'Origen', value: origen },
+  { label: 'Ideales', value: ideales },
+  { label: 'Lazos', value: lazos },
+  { label: 'Defectos', value: defectos },
+].filter((field) => field.value);
+
+const labelClass = 'block font-bold uppercase tracking-wider text-[var(--sl-color-accent)] mb-0.5';
+const traitTextClass = 'm-0 leading-relaxed';
 ---
 
 {
-  show && (
-    <div class="mb-8 border-2 border-[var(--sl-color-accent)] rounded-lg overflow-hidden">
+  (
+    <div class="overflow-hidden">
       {/* Header */}
-      <div class="flex justify-between items-start px-5 py-4 border-b-2 border-[var(--sl-color-accent)] bg-gradient-to-br from-[rgba(139,32,32,0.08)] to-[rgba(184,134,11,0.08)]">
-        <div class="flex-1">
+      <div class="rounded-md flex justify-between items-start px-5 py-4 bg-linear-to-br from-[rgba(139,32,32,0.08)] to-[rgba(184,134,11,0.08)]">
+        <div class="flex-1 flex flex-col gap-0.5">
           {subtitleParts.length > 0 && (
-            <p class="m-0 text-base font-heading font-semibold">{subtitleParts.join(' · ')}</p>
+            <p class="m-0 font-heading font-semibold">{subtitleParts.join(' · ')}</p>
           )}
           {alineamiento && (
-            <p class="mt-0.5 mb-0 text-[0.85rem] text-[var(--sl-color-gray-2)] italic">
-              {alineamiento}
-            </p>
+            <p class="mt-0.5 mb-0 text-(--sl-color-gray-2) italic">{alineamiento}</p>
           )}
         </div>
         <StatusBadge estado={estado} />
@@ -101,64 +104,42 @@ const traitTextClass = 'm-0 text-[0.85rem] leading-relaxed';
       {/* Traits body */}
       {hasTraits && (
         <div class="grid grid-cols-2 max-md:grid-cols-1">
-          {(hasPersonality || origen) && (
-            <div class="px-5 py-4 border-r border-[var(--sl-color-gray-3)] max-md:border-r-0 max-md:border-b max-md:border-[var(--sl-color-gray-3)]">
-              {origen && (
-                <div class="mb-2.5">
-                  <span class={labelClass}>Origen</span>
-                  <p class={traitTextClass}>{origen}</p>
+          {TRAIT_FIELDS.length > 0 && (
+            <div class="rounded-sm flex flex-col gap-4 p-5 border border-(--sl-color-hairline)">
+              {TRAIT_FIELDS.map((field) => (
+                <div>
+                  <span class={labelClass}>{field.label}</span>
+                  <p class={traitTextClass}>{field.value}</p>
                 </div>
-              )}
-              {hasPersonality && personalidad && (
-                <div class="mt-1.5">
-                  <span class={labelClass}>Personalidad</span>
-                  <div class="flex flex-col gap-2 mt-1.5">
-                    {PERSONALITY_AXES.map((axis) => {
-                      const value = personalidad[axis.key];
-                      if (typeof value !== 'number') return null;
-                      const clamped = Math.max(0, Math.min(100, value));
-                      return (
-                        <div class="flex items-center gap-2">
-                          <span class="text-[0.7rem] text-[var(--sl-color-gray-2)] whitespace-nowrap w-24 shrink-0 text-right">
-                            {axis.low}
-                          </span>
-                          <div class="flex-1 h-2 bg-[var(--sl-color-gray-6)] rounded overflow-hidden min-w-16">
-                            <div
-                              class="h-full rounded bg-gradient-to-r from-[var(--sl-color-accent)] to-[var(--sl-color-accent-high)] transition-[width] duration-300 ease-in-out"
-                              style={`width: ${clamped}%`}
-                            />
-                          </div>
-                          <span class="text-[0.7rem] text-[var(--sl-color-gray-2)] whitespace-nowrap w-24 shrink-0 text-left">
-                            {axis.high}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
+              ))}
             </div>
           )}
-          {(ideales || lazos || defectos) && (
-            <div class="px-5 py-4">
-              {ideales && (
-                <div class="mb-2.5 last:mb-0">
-                  <span class={labelClass}>Ideales</span>
-                  <p class={traitTextClass}>{ideales}</p>
-                </div>
-              )}
-              {lazos && (
-                <div class="mb-2.5 last:mb-0">
-                  <span class={labelClass}>Lazos</span>
-                  <p class={traitTextClass}>{lazos}</p>
-                </div>
-              )}
-              {defectos && (
-                <div class="mb-2.5 last:mb-0">
-                  <span class={labelClass}>Defectos</span>
-                  <p class={traitTextClass}>{defectos}</p>
-                </div>
-              )}
+          {personalidad && (
+            <div class="m-0 p-5 flex flex-col gap-5">
+              <span class={labelClass}>Personalidad</span>
+              <div class="flex flex-col gap-2">
+                {PERSONALITY_AXES.map((axis) => {
+                  const value = personalidad[axis.key];
+                  if (typeof value !== 'number') return null;
+                  const clamped = Math.max(0, Math.min(100, value));
+                  return (
+                    <div class="flex items-center gap-2">
+                      <span class="text-(--sl-color-gray-2) whitespace-nowrap w-24 shrink-0 text-right">
+                        {axis.low}
+                      </span>
+                      <div class="flex-1 h-2 bg-(--sl-color-gray-6) rounded overflow-hidden min-w-16">
+                        <div
+                          class="h-full rounded bg-linear-to-r from-(--sl-color-accent) to-(--sl-color-accent-high) transition-[width] duration-300 ease-in-out"
+                          style={`width: ${clamped}%`}
+                        />
+                      </div>
+                      <span class="text-(--sl-color-gray-2) whitespace-nowrap w-24 shrink-0 text-left">
+                        {axis.high}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>
@@ -166,11 +147,11 @@ const traitTextClass = 'm-0 text-[0.85rem] leading-relaxed';
 
       {/* Strengths / Weaknesses */}
       {hasStrengthsWeaknesses && (
-        <div class="flex items-start gap-8 px-5 py-4 border-t border-[var(--sl-color-gray-3)] max-md:flex-col max-md:gap-4">
+        <div class="flex items-start gap-8 px-5 py-4 border-t border-(--sl-color-gray-3) max-md:flex-col max-md:gap-4">
           {hasContent(puntos_fuertes) && (
             <div class="flex-1">
               <span class={labelClass}>Puntos Fuertes</span>
-              <ul class="m-0 pl-5 text-[0.85rem] leading-relaxed marker:text-[var(--sl-color-accent)]">
+              <ul class="m-0 pl-5 leading-relaxed marker:text-(--sl-color-accent)">
                 {puntos_fuertes!.map((p) => (
                   <li class="mb-0.5">{p}</li>
                 ))}
@@ -180,7 +161,7 @@ const traitTextClass = 'm-0 text-[0.85rem] leading-relaxed';
           {hasContent(puntos_debiles) && (
             <div class="flex-1">
               <span class={labelClass}>Puntos Debiles</span>
-              <ul class="m-0 pl-5 text-[0.85rem] leading-relaxed marker:text-[var(--sl-color-accent-high)]">
+              <ul class="m-0 pl-5 leading-relaxed marker:text-(--sl-color-accent-high)">
                 {puntos_debiles!.map((p) => (
                   <li class="mb-0.5">{p}</li>
                 ))}
