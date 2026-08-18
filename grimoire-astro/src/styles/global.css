@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel:wght@400;600;700&family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fira+Code:wght@400;500&display=swap');
 
 @layer base, starlight, theme, components, utilities;
 
@@ -7,13 +7,15 @@
 @import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme {
-  --font-sans: 'Crimson Text', Georgia, serif;
+  --font-sans: 'Alegreya', Georgia, serif;
   --font-mono: 'Fira Code', ui-monospace, monospace;
-  --font-heading: 'Cinzel', 'Palatino Linotype', serif;
+  --font-heading: 'UnifrakturCook', 'Cinzel', 'Palatino Linotype', serif;
 }
 
 /* Starlight theme — light mode (base) */
 :root {
+  --sl-content-width: 60rem;
+  --sl-text-base: 1.125rem;
   --sl-font-headings: var(--font-heading);
   --sl-color-accent-low: #2a2210;
   --sl-color-accent: #c9a84c;
@@ -26,6 +28,12 @@
   --sl-color-gray-5: #8c7a5e;
   --sl-color-gray-6: #d4c9b0;
   --sl-color-gray-7: #f5f0e6;
+}
+
+/* Starlight never sets body font-size from --sl-text-base; markdown paragraphs
+   otherwise fall back to the browser's 16px default regardless of the var above. */
+body {
+  font-size: var(--sl-text-base);
 }
 
 /* Starlight theme — dark mode */
@@ -58,14 +66,23 @@ h6,
   color: var(--sl-color-gray-4);
 }
 
+h3,
+h4,
+h5,
+h6,
+.sl-markdown-content h3,
+.sl-markdown-content h4 {
+  font-family: 'Cinzel', 'Palatino Linotype', serif;
+}
+
 h1,
 .sl-markdown-content h1 {
-  font-size: 2rem;
+  font-size: 2.75rem;
 }
 
 h2,
 .sl-markdown-content h2 {
-  font-size: 1.5rem;
+  font-size: 2.1rem;
 }
 
 h3,
