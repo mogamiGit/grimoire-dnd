@@ -1,0 +1,30 @@
+---
+import CharacterHeaderVivo from './CharacterHeaderVivo.astro';
+import CharacterHeaderMuerto from './CharacterHeaderMuerto.astro';
+import CharacterHeaderDesaparecido from './CharacterHeaderDesaparecido.astro';
+
+interface Props {
+  title?: string;
+  nickname?: string;
+  class?: string;
+  race?: string;
+  status?: string;
+  alignment?: string;
+  death_date?: Date;
+  death_cause?: string;
+  death_location?: string;
+  epitaph?: string;
+  disappearance_date?: Date;
+  disappearance_location?: string;
+  last_seen_wearing?: string;
+  reward?: string;
+}
+
+const { status, ...props } = Astro.props;
+const isDeceased = status === 'muerto';
+const isMissing = status === 'desaparecido';
+---
+
+{isDeceased && <CharacterHeaderMuerto {...props} />}
+{isMissing && <CharacterHeaderDesaparecido {...props} />}
+{!isDeceased && !isMissing && <CharacterHeaderVivo {...props} status={status} />}

@@ -1,8 +1,8 @@
 ---
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
-import CharacterSheet from './CharacterSheet.astro';
-import Obituary from './Obituary.astro';
-import CharacterCards from './CharacterCards.astro';
+import CharacterSheet from './Character/CharacterSheet.astro';
+import CharacterHeader from './Character/CharacterHeader/CharacterHeader.astro';
+import CharacterCards from './Character/CharacterCards.astro';
 import Backlinks from './Backlinks.astro';
 import TagList from './TagList.astro';
 import TagLinker from './TagLinker.astro';
@@ -26,48 +26,46 @@ const isCharacterPage =
   !slug.endsWith('personajes/index') &&
   tags.includes('personaje/jugador');
 
-const isPersonajesIndex = slug.endsWith('personajes') || slug.endsWith('personajes/index');
-
-const isDeceased = isCharacterPage && frontmatter.estado === 'muerto';
+const isCharactersIndex = slug.endsWith('personajes') || slug.endsWith('personajes/index');
 ---
 
 <Default {...Astro.props}>
   {
-    isDeceased && (
-      <Obituary
+    isCharacterPage && (
+      <CharacterHeader
         title={frontmatter.title as string}
         nickname={frontmatter.nickname as string}
-        clase={frontmatter.clase as string}
-        raza={frontmatter.raza as string}
-        fecha_muerte={frontmatter.fecha_muerte as Date}
-        causa_muerte={frontmatter.causa_muerte as string}
-        lugar_muerte={frontmatter.lugar_muerte as string}
-        epitafio={frontmatter.epitafio as string}
-        lazos={frontmatter.lazos as string}
-        puntos_fuertes={frontmatter.puntos_fuertes as string[]}
+        class={frontmatter.class as string}
+        race={frontmatter.race as string}
+        status={frontmatter.status as string}
+        alignment={frontmatter.alignment as string}
+        death_date={frontmatter.death_date as Date}
+        death_cause={frontmatter.death_cause as string}
+        death_location={frontmatter.death_location as string}
+        epitaph={frontmatter.epitaph as string}
+        disappearance_date={frontmatter.disappearance_date as Date}
+        disappearance_location={frontmatter.disappearance_location as string}
+        last_seen_wearing={frontmatter.last_seen_wearing as string}
+        reward={frontmatter.reward as string}
       />
     )
   }
   {
-    isCharacterPage && !isDeceased && (
+    isCharacterPage && (
       <CharacterSheet
-        clase={frontmatter.clase as string}
-        raza={frontmatter.raza as string}
-        estado={frontmatter.estado as string}
-        alineamiento={frontmatter.alineamiento as string}
-        personalidad={
-          frontmatter.personalidad as Record<string, number | null | undefined> | undefined
+        personality={
+          frontmatter.personality as Record<string, number | null | undefined> | undefined
         }
-        origen={frontmatter.origen as string}
-        ideales={frontmatter.ideales as string}
-        lazos={frontmatter.lazos as string}
-        defectos={frontmatter.defectos as string}
-        puntos_fuertes={frontmatter.puntos_fuertes as string[]}
-        puntos_debiles={frontmatter.puntos_debiles as string[]}
+        origin={frontmatter.origin as string}
+        ideals={frontmatter.ideals as string}
+        bonds={frontmatter.bonds as string}
+        flaws={frontmatter.flaws as string}
+        strengths={frontmatter.strengths as string[]}
+        weaknesses={frontmatter.weaknesses as string[]}
       />
     )
   }
-  {isPersonajesIndex && <CharacterCards />}
+  {isCharactersIndex && <CharacterCards />}
   <slot />
   <TagLinker />
   <TagList tags={tags} />

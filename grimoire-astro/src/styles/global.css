@@ -10,6 +10,19 @@
   --font-sans: 'Alegreya', Georgia, serif;
   --font-mono: 'Fira Code', ui-monospace, monospace;
   --font-heading: 'UnifrakturCook', 'Cinzel', 'Palatino Linotype', serif;
+
+  --color-forest: #2d6a2e;
+  --color-mint: #e8f5e9;
+  --color-crimson: #8b2020;
+  --color-blush: #fce4ec;
+  --color-goldenrod: #b8860b;
+  --color-goldenrod-dark: #8a6414;
+  --color-cream: #fff8e1;
+  --color-onyx: #191410;
+  --color-umber: #2a201a;
+  --color-bone: #e8ded0;
+  --color-tan: #c9bba0;
+  --color-taupe: #a89985;
 }
 
 /* Starlight theme — light mode (base) */
@@ -114,6 +127,10 @@ nav a[aria-current='page'] {
 
 .starlight-aside {
   border-radius: 0.25rem;
+}
+
+.pagination-links .link-title {
+  font-size: 1.05rem;
 }
 
 /* Fix: Restore Starlight column separators overridden by Tailwind v4 preflight layer ordering */
