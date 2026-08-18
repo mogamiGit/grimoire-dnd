@@ -9,8 +9,8 @@ const characters = allDocs.filter((doc) => {
   return (
     Array.isArray(tags) &&
     tags.includes('personaje/jugador') &&
-    doc.id.startsWith('notes/wiki/personajes/') &&
-    doc.id !== 'notes/wiki/personajes/index'
+    doc.id.startsWith('notes/personajes/') &&
+    doc.id !== 'notes/personajes/index'
   );
 });
 
