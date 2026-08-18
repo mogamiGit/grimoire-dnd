@@ -25,6 +25,11 @@ puntos_fuertes:
   - ""
 puntos_debiles:
   - ""
+# Solo si estado: "muerto" — se muestra como esquela
+fecha_muerte:
+causa_muerte: ""
+lugar_muerte: ""
+epitafio: ""
 ---
 
 # {{title}}

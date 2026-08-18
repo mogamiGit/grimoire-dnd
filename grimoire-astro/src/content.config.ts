@@ -31,6 +31,11 @@ export const collections = {
         defectos: z.string().optional(),
         puntos_fuertes: z.array(z.string()).optional(),
         puntos_debiles: z.array(z.string()).optional(),
+        // Obituary fields (estado: muerto)
+        fecha_muerte: z.coerce.date().optional(),
+        causa_muerte: z.string().optional(),
+        lugar_muerte: z.string().optional(),
+        epitafio: z.string().optional(),
         // Diary fields
         description: z.string().optional(),
         location: z.string().optional(),

@@ -1,6 +1,7 @@
 ---
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
 import CharacterSheet from './CharacterSheet.astro';
+import Obituary from './Obituary.astro';
 import CharacterCards from './CharacterCards.astro';
 import Backlinks from './Backlinks.astro';
 import TagList from './TagList.astro';
@@ -20,18 +21,35 @@ try {
 }
 
 const isCharacterPage =
-  slug.includes('wiki/personajes/') &&
-  !slug.endsWith('wiki/personajes') &&
+  slug.includes('personajes/') &&
+  !slug.endsWith('personajes') &&
   !slug.endsWith('personajes/index') &&
   tags.includes('personaje/jugador');
 
-const isPersonajesIndex =
-  slug.endsWith('wiki/personajes') || slug.endsWith('wiki/personajes/index');
+const isPersonajesIndex = slug.endsWith('personajes') || slug.endsWith('personajes/index');
+
+const isDeceased = isCharacterPage && frontmatter.estado === 'muerto';
 ---
 
 <Default {...Astro.props}>
   {
-    isCharacterPage && (
+    isDeceased && (
+      <Obituary
+        title={frontmatter.title as string}
+        nickname={frontmatter.nickname as string}
+        clase={frontmatter.clase as string}
+        raza={frontmatter.raza as string}
+        fecha_muerte={frontmatter.fecha_muerte as Date}
+        causa_muerte={frontmatter.causa_muerte as string}
+        lugar_muerte={frontmatter.lugar_muerte as string}
+        epitafio={frontmatter.epitafio as string}
+        lazos={frontmatter.lazos as string}
+        puntos_fuertes={frontmatter.puntos_fuertes as string[]}
+      />
+    )
+  }
+  {
+    isCharacterPage && !isDeceased && (
       <CharacterSheet
         clase={frontmatter.clase as string}
         raza={frontmatter.raza as string}
