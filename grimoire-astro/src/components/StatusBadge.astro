@@ -1,6 +1,6 @@
 ---
 interface Props {
-  estado?: string;
+  status?: string;
   fallback?: string;
 }
 
@@ -11,14 +11,14 @@ const STATUS_LABELS: Record<string, string> = {
 };
 
 const STATUS_COLORS: Record<string, string> = {
-  vivo: 'bg-[#2d6a2e] text-[#e8f5e9]',
-  muerto: 'bg-[#8b2020] text-[#fce4ec]',
-  desaparecido: 'bg-[#b8860b] text-[#fff8e1]',
+  vivo: 'bg-forest text-mint',
+  muerto: 'bg-crimson text-blush',
+  desaparecido: 'bg-goldenrod text-cream',
   otro: 'bg-[var(--sl-color-gray-4)] text-[var(--sl-color-gray-1)]',
 };
 
-const { estado, fallback } = Astro.props;
-const status = estado || fallback;
+const { status: rawStatus, fallback } = Astro.props;
+const status = rawStatus || fallback;
 const label = status ? (STATUS_LABELS[status] ?? status) : null;
 const colorClass = status && STATUS_LABELS[status] ? STATUS_COLORS[status] : STATUS_COLORS.otro;
 ---

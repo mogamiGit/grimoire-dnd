@@ -1,0 +1,49 @@
+---
+import StatusBadge from '../../StatusBadge.astro';
+
+interface Props {
+  title?: string;
+  class?: string;
+  race?: string;
+  status?: string;
+  alignment?: string;
+  nickname?: string;
+}
+
+function str(v?: string | null): string | undefined {
+  if (v === undefined || v === null) return undefined;
+  const trimmed = String(v).trim();
+  return trimmed === '' ? undefined : trimmed;
+}
+
+const { status, ...rawStrings } = Astro.props;
+
+const title = str(rawStrings.title);
+const characterClass = str(rawStrings.class);
+const race = str(rawStrings.race);
+const alignment = str(rawStrings.alignment);
+const nickname = str(rawStrings.nickname);
+const subtitleParts = [characterClass, race].filter(Boolean);
+---
+
+<div
+  class="mb-8 rounded-md flex justify-between items-start px-5 py-4 bg-linear-to-br from-crimson/8 to-goldenrod/8"
+>
+  <div class="flex-1 flex flex-col gap-0.5">
+    {
+      (title || nickname) && (
+        <h2 class="m-0 text-xl font-heading font-semibold">
+          {title}
+          {nickname && <span class="italic font-normal text-tan"> "{nickname}"</span>}
+        </h2>
+      )
+    }
+    {
+      subtitleParts.length > 0 && (
+        <p class="m-0 text-2xl font-heading font-semibold">{subtitleParts.join(' · ')}</p>
+      )
+    }
+    {alignment && <p class="mt-0.5 mb-0 text-(--sl-color-gray-2) italic">{alignment}</p>}
+  </div>
+  <StatusBadge status={status} />
+</div>

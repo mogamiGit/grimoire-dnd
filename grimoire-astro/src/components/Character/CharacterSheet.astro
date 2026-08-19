@@ -1,0 +1,151 @@
+---
+interface PersonalityAxes {
+  flexible_stubborn?: number | null;
+  cowardly_reckless?: number | null;
+  dull_cunning?: number | null;
+  clumsy_sharp?: number | null;
+  inept_acrobatic?: number | null;
+  sensible_lunatic?: number | null;
+}
+
+interface Props {
+  personality?: PersonalityAxes;
+  origin?: string;
+  ideals?: string;
+  bonds?: string;
+  flaws?: string;
+  strengths?: string[];
+  weaknesses?: string[];
+}
+
+const PERSONALITY_AXES: Array<{ key: keyof PersonalityAxes; low: string; high: string }> = [
+  { key: 'flexible_stubborn', low: 'Flexible', high: 'Adoquin' },
+  { key: 'cowardly_reckless', low: 'Miedica', high: 'Temerario' },
+  { key: 'dull_cunning', low: 'Desaborido', high: 'Ladino' },
+  { key: 'clumsy_sharp', low: 'Altas discapacidades', high: 'Avispado' },
+  { key: 'inept_acrobatic', low: 'Negado', high: 'Acrobatico' },
+  { key: 'sensible_lunatic', low: 'Sensato', high: 'Lunatico' },
+];
+
+function hasContent(arr?: string[]): boolean {
+  return Array.isArray(arr) && arr.length > 0 && arr[0] !== '';
+}
+
+function hasPersonality(p?: PersonalityAxes): boolean {
+  if (!p || typeof p !== 'object') return false;
+  return PERSONALITY_AXES.some((axis) => {
+    const v = p[axis.key];
+    return typeof v === 'number' && v !== null;
+  });
+}
+
+function str(v?: string | null): string | undefined {
+  if (v === undefined || v === null) return undefined;
+  const trimmed = String(v).trim();
+  return trimmed === '' ? undefined : trimmed;
+}
+
+const {
+  personality,
+  strengths: rawStrengths,
+  weaknesses: rawWeaknesses,
+  ...rawStrings
+} = Astro.props;
+
+const origin = str(rawStrings.origin);
+const ideals = str(rawStrings.ideals);
+const bonds = str(rawStrings.bonds);
+const flaws = str(rawStrings.flaws);
+const strengths = rawStrengths;
+const weaknesses = rawWeaknesses;
+
+const hasPersonalityAxes = hasPersonality(personality);
+const hasTraits = hasPersonalityAxes || origin || ideals || bonds || flaws;
+const hasStrengthsWeaknesses = hasContent(strengths) || hasContent(weaknesses);
+
+const TRAIT_FIELDS = [
+  { label: 'Origen', value: origin },
+  { label: 'Ideales', value: ideals },
+  { label: 'Lazos', value: bonds },
+  { label: 'Defectos', value: flaws },
+].filter((field) => field.value);
+
+const labelClass = 'block font-bold uppercase tracking-wider text-[var(--sl-color-accent)]';
+const traitTextClass = 'm-0 leading-relaxed';
+---
+
+{
+  (
+    <div class="overflow-hidden">
+      {/* Traits body */}
+      {hasTraits && (
+        <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
+          {TRAIT_FIELDS.length > 0 && (
+            <div class="rounded-sm flex flex-col gap-4 p-5 border border-(--sl-color-hairline)">
+              {TRAIT_FIELDS.map((field) => (
+                <div>
+                  <span class={labelClass}>{field.label}</span>
+                  <p class={traitTextClass}>{field.value}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          {personality && (
+            <div class="m-0 rounded-md p-5 flex flex-col gap-5 bg-linear-to-br to-crimson/8 from-goldenrod/8">
+              <span class={labelClass}>Personalidad</span>
+              <div class="h-full flex flex-col gap-2 justify-center">
+                {PERSONALITY_AXES.map((axis) => {
+                  const value = personality[axis.key];
+                  if (typeof value !== 'number') return null;
+                  const clamped = Math.max(0, Math.min(100, value));
+                  return (
+                    <div class="flex items-center gap-4">
+                      <span class="text-sm text-(--sl-color-gray-2) w-24 shrink-0 text-right">
+                        {axis.low}
+                      </span>
+                      <div class="flex-1 h-2 bg-(--sl-color-gray-6) rounded overflow-hidden min-w-16">
+                        <div
+                          class="h-full rounded bg-linear-to-r from-(--sl-color-accent) to-(--sl-color-accent-high) transition-[width] duration-300 ease-in-out"
+                          style={`width: ${clamped}%`}
+                        />
+                      </div>
+                      <span class="text-sm text-(--sl-color-gray-2) w-24 shrink-0 text-left">
+                        {axis.high}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Strengths / Weaknesses */}
+      {hasStrengthsWeaknesses && (
+        <div class="grid grid-cols-2 max-md:grid-cols-1 rounded-sm border border-(--sl-color-hairline)">
+          {hasContent(strengths) && (
+            <div class="flex-1 m-0 p-5">
+              <span class={labelClass}>Puntos Fuertes</span>
+              <ul class="m-0 leading-relaxed marker:text-(--sl-color-accent)">
+                {strengths!.map((p) => (
+                  <li class="mb-0.5">{p}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {hasContent(weaknesses) && (
+            <div class="flex-1 m-0 p-5">
+              <span class={labelClass}>Puntos Debiles</span>
+              <ul class="m-0 leading-relaxed marker:text-(--sl-color-accent-high)">
+                {weaknesses!.map((p) => (
+                  <li class="mb-0.5">{p}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}

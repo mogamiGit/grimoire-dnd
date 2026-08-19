@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import StatusBadge from './StatusBadge.astro';
+import StatusBadge from '../StatusBadge.astro';
 
 const allDocs = await getCollection('docs');
 
@@ -28,25 +28,25 @@ characters.sort((a, b) => {
         {characters.map((char) => {
           const title = (char.data.title as string) ?? 'Sin nombre';
           const nickname = char.data.nickname as string | undefined;
-          const estado = char.data.estado as string | undefined;
+          const status = char.data.status as string | undefined;
 
           return (
             <a
               href={`/${char.id}/`}
-              class="flex flex-col min-w-0 min-h-[150px] p-5 border-2 border-[var(--sl-color-gray-4)] rounded-lg bg-[var(--sl-color-gray-6)] no-underline text-[var(--sl-color-gray-1)] transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_4px_16px_var(--sl-color-gray-6)] hover:border-[var(--sl-color-accent)]"
+              class="flex flex-col min-w-0 min-h-37.5 p-5 border-2 border-(--sl-color-gray-4) rounded-lg bg-(--sl-color-gray-6) no-underline text-(--sl-color-gray-1) transition-all duration-200 hover:-translate-y-0.75 hover:shadow-[0_4px_16px_var(--sl-color-gray-6)] hover:border-(--sl-color-accent)"
             >
               <div class="flex justify-between items-start gap-2 p-4">
                 <div>
-                  <h3 class="m-0 text-[1.2rem] font-heading text-[var(--sl-color-gray-1)] leading-tight overflow-hidden text-ellipsis whitespace-nowrap">
+                  <h3 class="m-0 text-[1.2rem] font-heading text-(--sl-color-gray-1) leading-tight overflow-hidden text-ellipsis whitespace-nowrap">
                     {title}
                   </h3>
                   {nickname && (
-                    <p class="m-0 text-[0.95rem] italic text-[var(--sl-color-gray-4)] leading-tight">
+                    <p class="m-0 text-[0.95rem] italic text-(--sl-color-gray-4) leading-tight">
                       ({nickname})
                     </p>
                   )}
                 </div>
-                <StatusBadge estado={estado} fallback="vivo" />
+                <StatusBadge status={status} fallback="vivo" />
               </div>
             </a>
           );

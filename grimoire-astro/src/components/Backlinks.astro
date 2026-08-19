@@ -51,8 +51,8 @@ backlinks.sort((a, b) => a.title.localeCompare(b.title, 'es'));
 
 {
   backlinks.length > 0 && (
-    <div class="mt-8 pt-6 border-t border-[var(--sl-color-gray-3)]">
-      <h2 class="m-0 mb-3 text-base font-heading text-[var(--sl-color-gray-5)] uppercase tracking-wider">
+    <div class="mt-8 pt-6 border-t border-(--sl-color-gray-3)">
+      <h2 class="m-0 mb-3 text-base font-heading text-(--sl-color-gray-5) uppercase tracking-wider">
         Enlaces a esta página
       </h2>
       <ul class="m-0 p-0 list-none">
@@ -60,7 +60,7 @@ backlinks.sort((a, b) => a.title.localeCompare(b.title, 'es'));
           <li class="mb-1">
             <a
               href={link.href}
-              class="text-[var(--sl-color-accent)] no-underline text-[0.95rem] hover:underline"
+              class="text-(--sl-color-accent) no-underline text-[0.95rem] hover:underline"
             >
               {link.title}
             </a>

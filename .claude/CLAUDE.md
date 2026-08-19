@@ -82,24 +82,34 @@ CI enforces: `title`, `publish`, `tags`, `date` present. `publish` must be boole
 ### Character Frontmatter (additional fields)
 
 ```yaml
-clase: ""              # D&D class
-raza: ""               # Race
-estado: "vivo"         # Status: vivo/muerto/desaparecido
-origen: ""             # Origin
-alineamiento: ""       # Alignment
-nickname: ""           # Optional nickname
-personalidad:          # Personality axes (numeric scales)
-  flexible_adoquin:
-  miedica_temerario:
-  desaborido_ladino:
-  discapacidades_avispado:
-  negado_acrobatico:
-  sensato_lunatico:
-ideales: ""
-lazos: ""
-defectos: ""
-puntos_fuertes: []
-puntos_debiles: []
+class: ""              # D&D class
+race: ""                # Race
+status: "vivo"          # Status: vivo/muerto/desaparecido
+origin: ""              # Origin
+alignment: ""           # Alignment
+nickname: ""            # Optional nickname
+personality:            # Personality axes (numeric scales)
+  flexible_stubborn:
+  cowardly_reckless:
+  dull_cunning:
+  clumsy_sharp:
+  inept_acrobatic:
+  sensible_lunatic:
+ideals: ""
+bonds: ""
+flaws: ""
+strengths: []
+weaknesses: []
+# Obituary fields (status: muerto)
+death_date:
+death_cause: ""
+death_location: ""
+epitaph: ""
+# Missing poster fields (status: desaparecido)
+disappearance_date:
+disappearance_location: ""
+reward: ""
+last_seen_wearing: ""
 ```
 
 These fields are validated in `grimoire-astro/src/content.config.ts` via Zod schema extending Starlight's `docsSchema`.

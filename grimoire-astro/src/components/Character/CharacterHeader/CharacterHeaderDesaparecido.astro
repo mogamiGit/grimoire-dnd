@@ -1,0 +1,85 @@
+---
+interface Props {
+  title?: string;
+  nickname?: string;
+  class?: string;
+  race?: string;
+  disappearance_date?: Date;
+  disappearance_location?: string;
+  last_seen_wearing?: string;
+  reward?: string;
+}
+
+function str(v?: string | null): string | undefined {
+  if (v === undefined || v === null) return undefined;
+  const trimmed = String(v).trim();
+  return trimmed === '' ? undefined : trimmed;
+}
+
+const { title, disappearance_date, ...rawProps } = Astro.props;
+
+const nickname = str(rawProps.nickname);
+const characterClass = str(rawProps.class);
+const race = str(rawProps.race);
+const disappearanceLocation = str(rawProps.disappearance_location);
+const lastSeenWearing = str(rawProps.last_seen_wearing);
+const reward = str(rawProps.reward);
+
+const subtitleParts = [characterClass, race].filter(Boolean);
+const date = disappearance_date
+  ? new Intl.DateTimeFormat('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }).format(
+      disappearance_date,
+    )
+  : undefined;
+
+const labelClass =
+  'block text-[0.7rem] font-bold uppercase tracking-wider text-goldenrod-dark mb-0.5';
+const textClass = 'm-0 text-[0.85rem] leading-relaxed';
+---
+
+<div class="mb-8 border-4 border-double border-goldenrod rounded-sm overflow-hidden bg-goldenrod/6">
+  <div class="flex flex-col items-center gap-1 px-5 py-5 text-center border-b-2 border-goldenrod">
+    <span class="text-[0.75rem] font-bold uppercase tracking-[0.3em] text-goldenrod-dark">
+      Se busca
+    </span>
+    <h2 class="m-0 mt-1 text-xl font-heading font-semibold uppercase tracking-wide">
+      {title}
+      {nickname && <span class="italic font-normal normal-case text-tan"> "{nickname}"</span>}
+    </h2>
+    {
+      subtitleParts.length > 0 && (
+        <p class="m-0 text-[0.85rem] text-[var(--sl-color-gray-2)]">{subtitleParts.join(' · ')}</p>
+      )
+    }
+    <span class="mt-1 text-[0.75rem] font-bold uppercase tracking-[0.2em] text-goldenrod-dark"
+      >Desaparecido</span
+    >
+  </div>
+
+  {
+    (date || disappearanceLocation || lastSeenWearing) && (
+      <div class="px-5 py-4 flex flex-col gap-2.5 border-b border-goldenrod/30">
+        {(date || disappearanceLocation) && (
+          <div>
+            <span class={labelClass}>Visto por última vez</span>
+            <p class={textClass}>{[date, disappearanceLocation].filter(Boolean).join(' · ')}</p>
+          </div>
+        )}
+        {lastSeenWearing && (
+          <div>
+            <span class={labelClass}>Llevaba puesto</span>
+            <p class={textClass}>{lastSeenWearing}</p>
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  {
+    reward && (
+      <p class="m-0 px-5 py-3 text-center font-bold text-[0.9rem] text-goldenrod-dark">
+        💰 Recompensa: {reward}
+      </p>
+    )
+  }
+</div>

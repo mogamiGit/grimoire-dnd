@@ -1,0 +1,65 @@
+---
+interface Props {
+  title?: string;
+  nickname?: string;
+  class?: string;
+  race?: string;
+  death_date?: Date;
+  death_cause?: string;
+  death_location?: string;
+  epitaph?: string;
+}
+
+function str(v?: string | null): string | undefined {
+  if (v === undefined || v === null) return undefined;
+  const trimmed = String(v).trim();
+  return trimmed === '' ? undefined : trimmed;
+}
+
+const { title, death_date, ...rawProps } = Astro.props;
+
+const nickname = str(rawProps.nickname);
+const characterClass = str(rawProps.class);
+const race = str(rawProps.race);
+const deathCause = str(rawProps.death_cause);
+const deathLocation = str(rawProps.death_location);
+const epitaph = str(rawProps.epitaph);
+
+const subtitleParts = [characterClass, race].filter(Boolean);
+const date = death_date
+  ? new Intl.DateTimeFormat('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }).format(
+      death_date,
+    )
+  : undefined;
+
+const causeLocation = [deathCause, deathLocation].filter(Boolean).join(' · ');
+---
+
+<div class="border-2 border-umber rounded-md overflow-hidden bg-onyx">
+  <div
+    class="flex flex-col items-center gap-1 p-5 bg-linear-to-br from-black/35 to-black/10 text-center"
+  >
+    <span class="text-2xl leading-none" aria-hidden="true"> 💀 </span>
+    <h2 class="m-0 text-xl font-heading font-semibold text-bone">
+      {title}
+      {nickname && <span class="italic font-normal text-tan"> "{nickname}"</span>}
+    </h2>
+    {
+      subtitleParts.length > 0 && (
+        <p class="m-0 text-2xl font-heading font-semibold text-bone">{subtitleParts.join(' · ')}</p>
+      )
+    }
+  </div>
+  <div class="flex flex-col items-center gap-1 p-5 text-center">
+    {date && <p class="m-0 text-2xl text-taupe">✝ {date}</p>}
+    {causeLocation && <p class="m-0 text-taupe">{causeLocation}</p>}
+  </div>
+
+  {
+    epitaph && (
+      <p class="m-0 px-8 py-5 text-center italic font-serif leading-relaxed text-(--sl-color-text-accent) border-t border-umber">
+        "{epitaph}"
+      </p>
+    )
+  }
+</div>

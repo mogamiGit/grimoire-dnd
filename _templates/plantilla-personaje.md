@@ -5,31 +5,31 @@ tags:
   - personaje/jugador
   - campaign/tomb-of-annihilation
 date: "{{date}}"
-clase: ""
-raza: ""
-estado: "vivo"
+class: ""
+race: ""
+status: "vivo"
 
-origen: ""
-alineamiento: ""
-personalidad:
-  flexible_adoquin:
-  miedica_temerario:
-  desaborido_ladino:
-  discapacidades_avispado:
-  negado_acrobatico:
-  sensato_lunatico:
-ideales: ""
-lazos: ""
-defectos: ""
-puntos_fuertes:
+origin: ""
+alignment: ""
+personality:
+  flexible_stubborn:
+  cowardly_reckless:
+  dull_cunning:
+  clumsy_sharp:
+  inept_acrobatic:
+  sensible_lunatic:
+ideals: ""
+bonds: ""
+flaws: ""
+strengths:
   - ""
-puntos_debiles:
+weaknesses:
   - ""
-# Solo si estado: "muerto" — se muestra como esquela
-fecha_muerte:
-causa_muerte: ""
-lugar_muerte: ""
-epitafio: ""
+# Solo si status: "muerto" — se muestra como esquela
+death_date:
+death_cause: ""
+death_location: ""
+epitaph: ""
 ---
 
 # {{title}}

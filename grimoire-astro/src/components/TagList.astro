@@ -8,13 +8,13 @@ const { tags } = Astro.props;
 
 {
   tags.length > 0 && (
-    <div class="mt-8 pt-6 border-t border-[var(--sl-color-gray-6)]">
+    <div class="mt-8 pt-6 border-t border-(--sl-color-gray-6)">
       <h2>Etiquetas</h2>
       <div class="flex flex-wrap gap-1.5">
         {tags.map((tag) => (
           <a
             href={`/tags/${tag}/`}
-            class="sl-obs-tag no-underline cursor-pointer transition-all duration-150 hover:bg-[var(--sl-color-accent)] hover:text-[var(--sl-color-gray-7)] hover:border-[var(--sl-color-accent)]"
+            class="sl-obs-tag no-underline cursor-pointer transition-all duration-150 hover:bg-(--sl-color-accent) hover:text-(--sl-color-gray-7) hover:border-(--sl-color-accent)"
           >
             {tag}
           </a>
