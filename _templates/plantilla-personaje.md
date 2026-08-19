@@ -7,6 +7,7 @@ tags:
 date: "{{date}}"
 class: ""
 race: ""
+sex: ""
 status: "vivo"
 
 origin: ""

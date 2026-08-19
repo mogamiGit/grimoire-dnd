@@ -1,9 +1,12 @@
 ---
+import SexIcon from '../../SexIcon.astro';
+
 interface Props {
   title?: string;
   nickname?: string;
   class?: string;
   race?: string;
+  sex?: string;
   disappearance_date?: Date;
   disappearance_location?: string;
   last_seen_wearing?: string;
@@ -16,7 +19,7 @@ function str(v?: string | null): string | undefined {
   return trimmed === '' ? undefined : trimmed;
 }
 
-const { title, disappearance_date, ...rawProps } = Astro.props;
+const { title, disappearance_date, sex, ...rawProps } = Astro.props;
 
 const nickname = str(rawProps.nickname);
 const characterClass = str(rawProps.class);
@@ -33,32 +36,39 @@ const date = disappearance_date
   : undefined;
 
 const labelClass =
-  'block text-[0.7rem] font-bold uppercase tracking-wider text-goldenrod-dark mb-0.5';
-const textClass = 'm-0 text-[0.85rem] leading-relaxed';
+  'block text-[0.7rem] font-bold uppercase tracking-wider text-(--ink-desaparecido) mb-0.5';
+const textClass = 'm-0 text-[0.85rem] leading-relaxed text-umber';
 ---
 
-<div class="mb-8 border-4 border-double border-goldenrod rounded-sm overflow-hidden bg-goldenrod/6">
-  <div class="flex flex-col items-center gap-1 px-5 py-5 text-center border-b-2 border-goldenrod">
-    <span class="text-[0.75rem] font-bold uppercase tracking-[0.3em] text-goldenrod-dark">
+<div
+  class="mb-8 border-4 border-double border-(--ink-desaparecido) rounded-sm overflow-hidden bg-(--surface-desaparecido)"
+>
+  <div
+    class="flex flex-col items-center gap-1 px-5 py-5 text-center border-b-2 border-(--ink-desaparecido)/60"
+  >
+    <span class="text-[0.75rem] font-bold uppercase tracking-[0.3em] text-(--ink-desaparecido)">
       Se busca
     </span>
-    <h2 class="m-0 mt-1 text-xl font-heading font-semibold uppercase tracking-wide">
+    <h2 class="m-0 mt-1 uppercase tracking-wide text-onyx">
       {title}
-      {nickname && <span class="italic font-normal normal-case text-tan"> "{nickname}"</span>}
+      {nickname && <span class="italic font-normal normal-case text-umber"> "{nickname}"</span>}
     </h2>
     {
       subtitleParts.length > 0 && (
-        <p class="m-0 text-[0.85rem] text-[var(--sl-color-gray-2)]">{subtitleParts.join(' · ')}</p>
+        <p class="m-0 text-[0.85rem] text-umber">
+          {subtitleParts.join(' · ')}
+          <SexIcon sex={sex} />
+        </p>
       )
     }
-    <span class="mt-1 text-[0.75rem] font-bold uppercase tracking-[0.2em] text-goldenrod-dark"
+    <span class="mt-1 text-[0.75rem] font-bold uppercase tracking-[0.2em] text-(--ink-desaparecido)"
       >Desaparecido</span
     >
   </div>
 
   {
     (date || disappearanceLocation || lastSeenWearing) && (
-      <div class="px-5 py-4 flex flex-col gap-2.5 border-b border-goldenrod/30">
+      <div class="px-5 py-4 flex flex-col gap-2.5 border-b border-(--ink-desaparecido)/30">
         {(date || disappearanceLocation) && (
           <div>
             <span class={labelClass}>Visto por última vez</span>
@@ -77,7 +87,7 @@ const textClass = 'm-0 text-[0.85rem] leading-relaxed';
 
   {
     reward && (
-      <p class="m-0 px-5 py-3 text-center font-bold text-[0.9rem] text-goldenrod-dark">
+      <p class="m-0 px-5 py-3 text-center font-bold text-[0.9rem] text-(--ink-desaparecido)">
         💰 Recompensa: {reward}
       </p>
     )

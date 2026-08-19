@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import StatusBadge from '../StatusBadge.astro';
+import SexIcon from '../SexIcon.astro';
 
 const allDocs = await getCollection('docs');
 
@@ -28,6 +29,7 @@ characters.sort((a, b) => {
         {characters.map((char) => {
           const title = (char.data.title as string) ?? 'Sin nombre';
           const nickname = char.data.nickname as string | undefined;
+          const sex = char.data.sex as string | undefined;
           const status = char.data.status as string | undefined;
 
           return (
@@ -37,11 +39,12 @@ characters.sort((a, b) => {
             >
               <div class="flex justify-between items-start gap-2 p-4">
                 <div>
-                  <h3 class="m-0 text-[1.2rem] font-heading text-(--sl-color-gray-1) leading-tight overflow-hidden text-ellipsis whitespace-nowrap">
+                  <h3 class="m-0 text-[1.2rem] text-(--sl-color-gray-1) leading-tight overflow-hidden text-ellipsis whitespace-nowrap">
                     {title}
+                    <SexIcon sex={sex} />
                   </h3>
                   {nickname && (
-                    <p class="m-0 text-[0.95rem] italic text-(--sl-color-gray-4) leading-tight">
+                    <p class="m-0 text-[0.95rem] italic text-(--sl-color-gray-3) leading-tight">
                       ({nickname})
                     </p>
                   )}

@@ -12,6 +12,7 @@ export const collections = {
         date: z.coerce.date().optional(),
         class: z.string().optional(),
         race: z.string().optional(),
+        sex: z.enum(['femenino', 'masculino']).optional(),
         status: z.string().optional(),
         alignment: z.string().optional(),
         nickname: z.string().optional(),

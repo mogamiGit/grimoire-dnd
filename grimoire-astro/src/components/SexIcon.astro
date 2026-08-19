@@ -1,0 +1,21 @@
+---
+interface Props {
+  sex?: string;
+}
+
+const SEX_EMOJI: Record<string, string> = {
+  femenino: '♀️',
+  masculino: '♂️',
+};
+
+const { sex } = Astro.props;
+const emoji = sex ? SEX_EMOJI[sex] : undefined;
+---
+
+{
+  emoji && (
+    <span class="ml-1" aria-hidden="true">
+      {emoji}
+    </span>
+  )
+}

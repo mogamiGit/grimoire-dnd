@@ -1,9 +1,12 @@
 ---
+import SexIcon from '../../SexIcon.astro';
+
 interface Props {
   title?: string;
   nickname?: string;
   class?: string;
   race?: string;
+  sex?: string;
   death_date?: Date;
   death_cause?: string;
   death_location?: string;
@@ -16,7 +19,7 @@ function str(v?: string | null): string | undefined {
   return trimmed === '' ? undefined : trimmed;
 }
 
-const { title, death_date, ...rawProps } = Astro.props;
+const { title, death_date, sex, ...rawProps } = Astro.props;
 
 const nickname = str(rawProps.nickname);
 const characterClass = str(rawProps.class);
@@ -35,29 +38,30 @@ const date = death_date
 const causeLocation = [deathCause, deathLocation].filter(Boolean).join(' · ');
 ---
 
-<div class="border-2 border-umber rounded-md overflow-hidden bg-onyx">
-  <div
-    class="flex flex-col items-center gap-1 p-5 bg-linear-to-br from-black/35 to-black/10 text-center"
-  >
+<div class="border-4 border-double border-taupe rounded-md overflow-hidden bg-(--surface-muerto)">
+  <div class="flex flex-col items-center gap-1 p-5 text-center">
     <span class="text-2xl leading-none" aria-hidden="true"> 💀 </span>
-    <h2 class="m-0 text-xl font-heading font-semibold text-bone">
+    <h2 class="m-0 text-bone">
       {title}
-      {nickname && <span class="italic font-normal text-tan"> "{nickname}"</span>}
+      {nickname && <span class="italic font-normal text-bone"> "{nickname}"</span>}
     </h2>
     {
       subtitleParts.length > 0 && (
-        <p class="m-0 text-2xl font-heading font-semibold text-bone">{subtitleParts.join(' · ')}</p>
+        <p class="m-0 text-2xl font-heading font-semibold text-bone">
+          {subtitleParts.join(' · ')}
+          <SexIcon sex={sex} />
+        </p>
       )
     }
   </div>
   <div class="flex flex-col items-center gap-1 p-5 text-center">
-    {date && <p class="m-0 text-2xl text-taupe">✝ {date}</p>}
-    {causeLocation && <p class="m-0 text-taupe">{causeLocation}</p>}
+    {date && <p class="m-0 text-2xl text-bone">✝ {date}</p>}
+    {causeLocation && <p class="m-0 text-bone">{causeLocation}</p>}
   </div>
 
   {
     epitaph && (
-      <p class="m-0 px-8 py-5 text-center italic font-serif leading-relaxed text-(--sl-color-text-accent) border-t border-umber">
+      <p class="m-0 px-8 py-5 text-center italic font-serif leading-relaxed text-(--sl-color-accent-high) border-t border-umber">
         "{epitaph}"
       </p>
     )
