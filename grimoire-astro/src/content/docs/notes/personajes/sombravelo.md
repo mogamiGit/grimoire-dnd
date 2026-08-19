@@ -6,7 +6,10 @@ publish: true
 date: 2025-06-19
 class: pícaro
 race: humano
+sex: masculino
 status: desaparecido
+last_seen_wearing: unos cuantos anillos llenos de piedras preciosas
+reward: un posible encuentro casual picante
 origin: Maestro del sigilo, la mentira y el tiro certero desde la torre de
   Azaka; desapareció sin explicación tras la conquista de la fortaleza yuanti,
   en el mismo periodo en que Kai murió y Kradoc partió.

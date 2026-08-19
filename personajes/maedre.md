@@ -8,8 +8,8 @@ tags:
 date: 2025-06-19
 class: "bardo + mago"
 race: "humano"
+sex: "masculino"
 status: "vivo"
-
 origin: "Explorador sigiloso y coleccionista compulsivo de manuales de golems; portador de Obolaká, el espíritu del oso momificado, tras tocar su anillo — y más tarde también del Sortilegio del Corazón, un pacto con un dios nuevo en conflicto con el primero."
 alignment: "Neutral bueno"
 personality:

@@ -4,8 +4,9 @@ editUrl: false
 nickname: La mártir
 publish: true
 date: 2025-06-19
-class: clériga
-race: humana
+class: clérigo
+race: "eladrin de verano (féerico) "
+sex: femenino
 status: vivo
 alignment: Neutral bueno
 personality:

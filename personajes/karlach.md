@@ -6,10 +6,10 @@ tags:
   - personaje/jugador
   - campaign/tomb-of-annihilation
 date: 2025-06-19
-class: "bárbara"
+class: "bárbaro"
 race: "tiefling"
+sex: "femenino"
 status: "vivo"
-
 origin: "Llegó a la tumba a través de un círculo de teleportación como reemplazo de Kradoc, sin explicaciones ni ceremonias."
 alignment: "Caótico bueno"
 personality:

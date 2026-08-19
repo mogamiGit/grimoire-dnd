@@ -7,14 +7,14 @@ tags:
 date: 2025-06-19
 class: "guerrero"
 race: "humano"
+sex: "femenino"
 status: "muerto"
 nickname: "el Sereno"
 death_date: 2025-07-19
 death_cause: "Cayó en la oleada final de guerreros serpiente, incapaz de contenerse ante enemigos que huían; nadie llegó a tiempo para estabilizarla."
 death_location: "Fortaleza yuanti, Catedral de Sangre, Chult"
 epitaph: "Nunca dio un paso atrás, ni siquiera ante la muerte."
-
-origin: "Guerrera humana ya curtida cuando se unió al grupo en la jungla de Chult; su vida antes de la jungla sigue siendo un misterio."
+origin: "Guerrera humana ya curtida cuando se unió al grupo en la jungla de Chult; su vida sigue siendo un misterio, y tiene flashbacks continuamente. Despertó hace mucho en un laboratorio, sin recuerdos, sorprendiendose de haber adquirido poderes psíquicos (como un mewtwo)."
 alignment: "Caótico bueno"
 personality:
   flexible_stubborn: 60

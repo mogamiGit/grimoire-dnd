@@ -6,6 +6,7 @@ publish: true
 date: 2025-06-19
 class: monje + pícaro
 race: orco
+sex: masculino
 status: vivo
 origin: Apareció de la nada en la Tumba de los Nueve Dioses, justo donde había
   muerto Powder, afirmando venir de un año en el futuro. Nadie sabe cómo llegó

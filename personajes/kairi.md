@@ -6,10 +6,10 @@ tags:
   - personaje/jugador
   - campaign/tomb-of-annihilation
 date: 2025-06-19
-class: "clériga"
-race: "humana"
+class: "clérigo"
+race: "eladrin de verano (féerico) "
+sex: "femenino"
 status: "vivo"
-
 alignment: "Neutral bueno"
 personality:
   flexible_stubborn: 75

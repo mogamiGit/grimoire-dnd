@@ -4,9 +4,12 @@ editUrl: false
 nickname: la Libertadora
 publish: true
 date: 2025-06-19
-class: bárbara
+class: bárbaro
 race: humana
+sex: femenino
 status: desaparecido
+last_seen_wearing: ""
+reward: ""
 origin: Esclava y contacto de Kai en la fortaleza yuanti; lideró un
   levantamiento para liberar al resto de esclavos, quedándose atrás sola cuando
   el grupo escapó.
