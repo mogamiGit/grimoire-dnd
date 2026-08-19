@@ -70,7 +70,7 @@ const TRAIT_FIELDS = [
   { label: 'Defectos', value: flaws },
 ].filter((field) => field.value);
 
-const labelClass = 'block font-bold uppercase tracking-wider text-[var(--sl-color-accent)]';
+const labelClass = 'block font-bold uppercase tracking-wider text-[var(--sl-color-text-accent)]';
 const traitTextClass = 'm-0 leading-relaxed';
 ---
 
@@ -91,7 +91,7 @@ const traitTextClass = 'm-0 leading-relaxed';
             </div>
           )}
           {personality && (
-            <div class="m-0 rounded-md p-5 flex flex-col gap-5 bg-linear-to-br to-crimson/8 from-goldenrod/8">
+            <div class="m-0 rounded-md p-5 flex flex-col gap-5 border border-(--sl-color-hairline) bg-linear-to-br to-crimson/8 from-goldenrod/8">
               <span class={labelClass}>Personalidad</span>
               <div class="h-full flex flex-col gap-2 justify-center">
                 {PERSONALITY_AXES.map((axis) => {
