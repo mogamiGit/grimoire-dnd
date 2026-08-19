@@ -3,7 +3,11 @@ title: Day 43 - The Frog God and the Possessed
 publish: true
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
+  - powder
   - campaign/tomb-of-annihilation
 description: The group descends deeper into the tomb, discovers a golden skull idol, solves the riddle of the frog god Kunamoth, and Indirak is possessed by cursed bracers from a sarcophagus. A throne of flesh and haunting murals await below.
 date: 2026-04-12

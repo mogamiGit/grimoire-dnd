@@ -12,7 +12,12 @@ description: The group launches a second assault on the yuan-ti fortress to
   fight. The slaves turn the tide.
 tags:
   - diary
-  - character/sombravelo
+  - kai
+  - kairi
+  - kradoc
+  - powder
+  - ruska
+  - sombravelo
   - campaign/tomb-of-annihilation
 ---
 

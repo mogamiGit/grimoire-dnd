@@ -3,7 +3,10 @@ title: Day 43 - The Rolling Boulder and the Painted Labyrinth
 publish: true
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
   - campaign/tomb-of-annihilation
 description: Deeper past the throne of flesh, the group triggers a rolling boulder trap, is ambushed by a horde of skeletal minotaurs conjured through a maze mosaic, and gets scattered inside a shifting painted labyrinth. Maedre emerges bearing a tattoo and a pact with a new god.
 date: 2026-06-26

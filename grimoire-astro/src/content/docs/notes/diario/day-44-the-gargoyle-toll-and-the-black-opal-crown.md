@@ -11,7 +11,10 @@ description: The group faces four living gargoyles guarding a pedestal puzzle,
   Clayface-like creatures over a crown set with a black opal.
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
   - campaign/tomb-of-annihilation
 ---
 

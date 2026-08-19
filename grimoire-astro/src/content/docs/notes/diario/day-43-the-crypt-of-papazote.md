@@ -11,7 +11,11 @@ description: The group battles electric guardians, a flesh golem, and navigates
   shattering the group.
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
+  - powder
   - campaign/tomb-of-annihilation
 ---
 

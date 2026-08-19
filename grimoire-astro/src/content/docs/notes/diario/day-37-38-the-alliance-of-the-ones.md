@@ -10,7 +10,12 @@ description: The group explores lava temples, recovers the cubes of Moa and
   rescues Kai from captivity. A slave uprising brews inside.
 tags:
   - diary
-  - character/sombravelo
+  - kai
+  - kairi
+  - kradoc
+  - powder
+  - ruska
+  - sombravelo
   - campaign/tomb-of-annihilation
 ---
 

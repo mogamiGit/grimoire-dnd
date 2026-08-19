@@ -3,7 +3,11 @@ title: Day 43 - Powder's Farewell and the Stranger from the Future
 publish: true
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
+  - powder
   - campaign/tomb-of-annihilation
 description: The group mourns Powder at her resting place, battles eye-tentacles and purple mold, and encounters a mysterious orc named Indirak Tonks who claims to come from the future. They defeat Mustio, the tomb's undead guardian, and claim powerful loot.
 date: 2026-04-01

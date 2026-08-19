@@ -11,7 +11,11 @@ description: The group mourns Powder at her resting place, battles eye-tentacles
   guardian, and claim powerful loot.
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
+  - powder
   - campaign/tomb-of-annihilation
 ---
 

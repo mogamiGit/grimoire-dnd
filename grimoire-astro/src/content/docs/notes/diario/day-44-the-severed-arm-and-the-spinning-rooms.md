@@ -11,7 +11,10 @@ description: To escape the crown's cursed room, Indirak amputates his own arm.
   rooms — one of which unleashes poison gas and giant tentacled plants.
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
   - campaign/tomb-of-annihilation
 ---
 

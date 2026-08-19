@@ -3,7 +3,12 @@ title: Day 40 - The Siege of the Serpent Fortress
 publish: true
 tags:
   - diary
-  - character/sombravelo
+  - kai
+  - kairi
+  - kradoc
+  - powder
+  - ruska
+  - sombravelo
   - campaign/tomb-of-annihilation
 description: The group launches a second assault on the yuan-ti fortress to rescue Ruska and recover the tube of Bokamir. An epic 30-minute battle ensues with waves of serpent warriors, Kai falls in combat and dies, Pisoni lands miraculous critical hits, and Sombravelo surrenders before rejoining the fight. The slaves turn the tide.
 date: 2025-07-19

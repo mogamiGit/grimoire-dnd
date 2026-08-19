@@ -11,7 +11,11 @@ description: Kradoc departs and Karlach arrives through a teleportation circle.
   spirit. Maedre discovers dark dwarves building a flesh golem.
 tags:
   - diary
-  - character/sombravelo
+  - kairi
+  - karlach
+  - kradoc
+  - maedre
+  - powder
   - campaign/tomb-of-annihilation
 ---
 

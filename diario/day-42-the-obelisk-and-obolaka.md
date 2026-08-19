@@ -3,7 +3,11 @@ title: Day 42 - The Obelisk and Obolaká
 publish: true
 tags:
   - diary
-  - character/sombravelo
+  - kairi
+  - karlach
+  - kradoc
+  - maedre
+  - powder
   - campaign/tomb-of-annihilation
 description: Kradoc departs and Karlach arrives through a teleportation circle. The group explores the tomb's upper levels, discovers the obelisk's cryptic message, faces demons, solves puzzles, and Powder is possessed by Obolaká's spirit. Maedre discovers dark dwarves building a flesh golem.
 date: 2026-01-03

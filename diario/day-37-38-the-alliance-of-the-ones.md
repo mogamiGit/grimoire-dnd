@@ -3,7 +3,12 @@ title: Day 37-38 - The Alliance of the Ones
 publish: true
 tags:
   - diary
-  - character/sombravelo
+  - kai
+  - kairi
+  - kradoc
+  - powder
+  - ruska
+  - sombravelo
   - campaign/tomb-of-annihilation
 description: The group explores lava temples, recovers the cubes of Moa and Obolaká, crosses treacherous terrain, infiltrates the yuan-ti fortress, and rescues Kai from captivity. A slave uprising brews inside.
 date: 2025-03-22

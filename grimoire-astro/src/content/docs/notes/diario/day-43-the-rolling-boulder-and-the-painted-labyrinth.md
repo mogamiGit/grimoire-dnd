@@ -11,7 +11,10 @@ description: Deeper past the throne of flesh, the group triggers a rolling
   emerges bearing a tattoo and a pact with a new god.
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
   - campaign/tomb-of-annihilation
 ---
 

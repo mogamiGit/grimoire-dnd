@@ -3,7 +3,10 @@ title: Day 44 - The Severed Arm and the Spinning Rooms
 publish: true
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
   - campaign/tomb-of-annihilation
 description: To escape the crown's cursed room, Indirak amputates his own arm. The group flees down the spiral stairs into a flooded chamber of hanging dwarves, a psychic-damage corridor, and a control panel that spins pentagonal rooms — one of which unleashes poison gas and giant tentacled plants.
 date: 2026-08-04

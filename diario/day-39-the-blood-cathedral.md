@@ -3,7 +3,12 @@ title: Day 39 - The Blood Cathedral
 publish: true
 tags:
   - diary
-  - character/sombravelo
+  - kai
+  - kairi
+  - kradoc
+  - powder
+  - ruska
+  - sombravelo
   - campaign/tomb-of-annihilation
 description: Deep in the yuan-ti lair, the group faces a colossal serpent, nightmare incense, and an epic battle in a blood-soaked underground cathedral.
 date: 2025-06-08

@@ -3,7 +3,11 @@ title: Day 43 - The Crypt of Papazote
 publish: true
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
+  - powder
   - campaign/tomb-of-annihilation
 description: The group battles electric guardians, a flesh golem, and navigates deadly traps. They discover the crypt of Papazote and Kairi receives a mysterious spirit. A locust swarm reveals Powder's skeletal remains, shattering the group.
 date: 2026-01-18

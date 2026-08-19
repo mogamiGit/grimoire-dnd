@@ -11,7 +11,10 @@ description: The group descends deeper into the tomb, discovers a golden skull
   below.
 tags:
   - diary
-  - character/sombravelo
+  - indirak
+  - kairi
+  - karlach
+  - maedre
   - campaign/tomb-of-annihilation
 ---
 
