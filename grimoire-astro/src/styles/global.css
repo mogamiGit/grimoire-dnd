@@ -171,3 +171,65 @@ a.sl-obs-tag:hover {
   color: var(--color-onyx);
   border-color: var(--sl-color-accent);
 }
+
+.tl-line {
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--sl-color-gray-5) 0,
+    var(--sl-color-gray-5) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  background-size: 100% 24px;
+  animation: tl-flow 1.5s linear infinite;
+}
+
+@keyframes tl-flow {
+  to {
+    background-position: 0 24px;
+  }
+}
+
+/* Let timeline popovers escape the main-pane stacking context
+   (Starlight sets isolation:isolate on .main-pane, trapping z-index) */
+.main-pane {
+  isolation: auto;
+}
+
+.tl-popover {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  width: max-content;
+  max-width: 18rem;
+  background: var(--sl-color-gray-6);
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+  z-index: 100;
+  margin-bottom: 0.625rem;
+}
+
+.tl-popover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--sl-color-gray-5);
+}
+
+.group\/marker:hover .tl-popover,
+.group\/marker:focus-within .tl-popover {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}

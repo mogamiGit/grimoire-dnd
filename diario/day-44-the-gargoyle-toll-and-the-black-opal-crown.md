@@ -7,7 +7,6 @@ tags:
   - kairi
   - karlach
   - maedre
-  - powder
   - campaign/tomb-of-annihilation
 description: The group faces four living gargoyles guarding a pedestal puzzle, nearly loses Indirak in the process, negotiates a toll to pass safely, gains a small lizard companion, and ends the session fighting two shadowy Clayface-like creatures over a crown set with a black opal.
 date: 2026-07-27

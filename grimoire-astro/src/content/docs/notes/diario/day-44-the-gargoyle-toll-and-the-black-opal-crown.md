@@ -15,7 +15,6 @@ tags:
   - kairi
   - karlach
   - maedre
-  - powder
   - campaign/tomb-of-annihilation
 ---
 

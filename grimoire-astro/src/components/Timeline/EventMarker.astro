@@ -1,0 +1,54 @@
+---
+import type { MarkerEvent } from '../../utils/timeline';
+
+interface Props {
+  event: MarkerEvent;
+}
+
+const { event } = Astro.props;
+
+const isDeath = event.type === 'death';
+const icon = isDeath ? '💀' : '🔍';
+const label = isDeath ? 'Muerte' : 'Desaparición';
+
+const dateStr = event.date.toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+---
+
+<div class="group/marker relative">
+  <button
+    class:list={[
+      'flex items-center justify-center w-7 h-7 rounded-full bg-[var(--sl-color-gray-6)] border-2 cursor-pointer text-sm transition-all duration-200 hover:scale-120 focus-visible:scale-120 p-0 m-0',
+      isDeath
+        ? 'border-crimson hover:bg-[color-mix(in_srgb,var(--color-crimson)_20%,var(--sl-color-gray-6))] hover:shadow-[0_0_8px_color-mix(in_srgb,var(--color-crimson)_40%,transparent)]'
+        : 'border-goldenrod-dark hover:bg-[color-mix(in_srgb,var(--color-goldenrod-dark)_20%,var(--sl-color-gray-6))] hover:shadow-[0_0_8px_color-mix(in_srgb,var(--color-goldenrod-dark)_40%,transparent)]',
+    ]}
+    aria-label={`${label}: ${event.title}`}
+  >
+    <span class="leading-none">{icon}</span>
+  </button>
+
+  <div class="tl-popover">
+    <div class="mb-0.5">
+      <span
+        class="text-[0.7rem] font-semibold uppercase tracking-wider text-[var(--sl-color-gray-3)]"
+      >
+        {label}
+      </span>
+    </div>
+    <a
+      href={event.href}
+      class="block font-[Cinzel,Palatino_Linotype,serif] text-sm font-semibold text-[var(--sl-color-gray-1)] no-underline mb-1 leading-snug hover:text-[var(--sl-color-accent)]"
+    >
+      {event.title}
+    </a>
+    <div class="flex flex-wrap gap-1.5 text-xs text-[var(--sl-color-gray-4)]">
+      <span>{dateStr}</span>
+      {event.location && <span>📍 {event.location}</span>}
+      {event.cause && <span>⚰️ {event.cause}</span>}
+    </div>
+  </div>
+</div>

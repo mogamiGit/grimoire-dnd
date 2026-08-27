@@ -1,0 +1,52 @@
+---
+import type { DiaryEntry } from '../../utils/timeline';
+import EventMarker from './EventMarker.astro';
+
+interface Props {
+  entry: DiaryEntry;
+}
+
+const { entry } = Astro.props;
+
+const dateStr = entry.date.toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+---
+
+<div
+  class="not-content flex items-start gap-3 bg-[var(--sl-color-gray-7)] border border-[var(--sl-color-gray-5)] border-l-4 border-l-[var(--sl-color-accent)] rounded-lg px-4 py-3"
+>
+  <a href={entry.href} class="text-xl shrink-0 no-underline">📖</a>
+  <div class="min-w-0 flex-1">
+    <div class="flex items-center gap-2">
+      <a
+        href={entry.href}
+        class="font-[Cinzel,Palatino_Linotype,serif] text-sm font-semibold text-[var(--sl-color-gray-1)] leading-snug no-underline hover:text-[var(--sl-color-accent)]"
+      >
+        {entry.title}
+      </a>
+    </div>
+    <div class="flex flex-wrap gap-2 mt-1 text-xs text-[var(--sl-color-gray-4)]">
+      <span>{dateStr}</span>
+      {
+        entry.campaignDay != null && (
+          <span class="font-semibold text-[var(--sl-color-text-accent)]">
+            Día {entry.campaignDay}
+          </span>
+        )
+      }
+      {entry.location && <span>📍 {entry.location}</span>}
+    </div>
+    {
+      entry.markers.length > 0 && (
+        <div class="flex flex-row gap-2 items-center mt-2">
+          {entry.markers.map((m) => (
+            <EventMarker event={m} />
+          ))}
+        </div>
+      )
+    }
+  </div>
+</div>
