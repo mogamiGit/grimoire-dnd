@@ -12,3 +12,5 @@ hero:
 - [Diario](/notes/diario/) — Registro de sesiones
 - [Wiki](/notes/wiki/) — Enciclopedia del mundo
 - [Reglas](/notes/reglas/) — Referencia rápida de reglas
+
+## Timeline

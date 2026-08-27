@@ -3,6 +3,7 @@ import Default from '@astrojs/starlight/components/MarkdownContent.astro';
 import CharacterSheet from './Character/CharacterSheet.astro';
 import CharacterHeader from './Character/CharacterHeader/CharacterHeader.astro';
 import CharacterCards from './Character/CharacterCards.astro';
+import Timeline from './Timeline/Timeline.astro';
 import Backlinks from './Backlinks.astro';
 import TagList from './TagList.astro';
 import TagLinker from './TagLinker.astro';
@@ -27,6 +28,7 @@ const isCharacterPage =
   tags.includes('personaje/jugador');
 
 const isCharactersIndex = slug.endsWith('personajes') || slug.endsWith('personajes/index');
+const isHome = slug === '';
 ---
 
 <Default {...Astro.props}>
@@ -68,6 +70,7 @@ const isCharactersIndex = slug.endsWith('personajes') || slug.endsWith('personaj
   }
   {isCharactersIndex && <CharacterCards />}
   <slot />
+  {isHome && <Timeline />}
   <TagLinker />
   <TagList tags={tags} />
   <Backlinks currentId={slug} />
